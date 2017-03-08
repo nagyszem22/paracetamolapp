@@ -1,0 +1,14 @@
+//////////////////////////////
+// Main details call
+//////////////////////////////
+
+// request
+{
+	"currentDateTime": "11-05-17 18:45:00",
+	"name": "John Doe",
+	"birthday": "11-05-85",
+	"nhsNumber": "54239524",
+	"ingestionDateTime": "11-05-17 18:45:00"
+}
+
+// answer
