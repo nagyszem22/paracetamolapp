@@ -1,6 +1,15 @@
-//////////////////////////////
-// Main details call
-//////////////////////////////
+//////////////////////////////////////////////////
+// url: api/v1/maindetails
+// type: POST
+// errors: 1
+//------------------------------------------------
+// created: 1
+// tested: 1
+// tested on ios: 0
+// tested on android: 0
+//------------------------------------------------
+// under modification: 0
+//////////////////////////////////////////////////
 
 // request
 {
@@ -12,3 +21,33 @@
 }
 
 // answer
+{
+	"status": {
+		"code": 0,
+		"name": "successfull request"
+	},
+	"content": {
+		"next_step": 2
+	}
+}
+
+
+
+
+
+//////////////////////////////////////////////////
+// ERROR HANDLING
+//////////////////////////////////////////////////
+
+/* 1 */
+{
+	"status": {
+		"code": 1,
+		"name": "form validation failed"
+	},
+	"content": {
+		"email": ["The email must be a valid email address."],
+		"password": ["Not strong enough.", "Password confirmation failed."],
+		"...": ["...", "..."]
+	}
+}

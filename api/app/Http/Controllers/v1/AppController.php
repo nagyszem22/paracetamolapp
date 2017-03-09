@@ -28,10 +28,24 @@ class AppController extends Controller
         ]);
 
         if ($validator->fails()) {
-          return response()->json($validator->errors()->all());
+          $answer = [
+            "staus" => [
+              "code" => 1,
+              "name" => "form validation failed"
+            ],
+            "content" => $validator->messages()
+          ];
+          return response()->json($answer);
         }
 
-        return response()->json($request->input());
+        $answer = [
+            "staus" => [
+              "code" => 0,
+              "name" => "successfull request"
+            ],
+            "content" => 2
+        ];
+        return response()->json($answer);
 
    		  // @todo: connect to openEhr and upload the patient data
   		  // @todo: send back a response
