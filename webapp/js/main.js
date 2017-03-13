@@ -4,7 +4,7 @@ $(document).ready(function(){
 	requesData.currentDateTime = "11-05-17 18:45:00";
 	requesData.name = "John Doe";
 	requesData.birthday = "11-05-17";
-	requesData.nhsNumber = "54239524";
+	requesData.nhsNumber = "5423524";
 	requesData.ingestionDateTime = "11-05-17 18:45:00";
 
 	$.ajax({
@@ -14,7 +14,7 @@ $(document).ready(function(){
 		data: JSON.stringify(requesData),
 		success: function(data) {
 	        console.log(data);
-	        $('.hello').html(data.name);
+	        // $('.hello').html(data.name);
 	 }});
 
 });
