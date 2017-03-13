@@ -8,7 +8,7 @@ $(document).ready(function(){
 	requesData.ingestionDateTime = "11-05-17 18:45:00";
 
 	$.ajax({
-		url: "http://paracetamolapi.app/api/v1/maindetails",
+		url: "http://localhost:8888/paracetamolapp/api/public/api/v1/maindetails",
 		type: "POST",
 		contentType: "application/json",
 		data: JSON.stringify(requesData),
