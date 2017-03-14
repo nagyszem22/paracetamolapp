@@ -1,4 +1,4 @@
-var SITE_INDEX = 'http://paracetamol.app';
+var SITE_INDEX = 'http://localhost:8888/paracetamolapp/webapp';
 
 $(document).ready(function(){
 
