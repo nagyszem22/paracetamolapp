@@ -1,3 +1,5 @@
+var SITE_INDEX = 'http://paracetamol.app';
+
 $(document).ready(function(){
 
 	/*requesData = {};
@@ -26,7 +28,7 @@ $(document).ready(function(){
 	/* Show next page */
 	$('.next-button').on('click', function() {
 		var link = $(this).attr('data-link');
-		window.location.href = link;
+		window.location.href = SITE_INDEX+link;
 	});
 
 });
