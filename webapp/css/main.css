@@ -1,6 +1,7 @@
 body  {
+	height: 100%;
 	background: #eee;
-	background: url('../media/images/background.jpg') no-repeat center center;
+	background: url('../media/images/background.jpg') repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -41,7 +42,17 @@ body  {
 	border-top: 1px solid #ddd;
 	border-bottom: 2px solid #ddd;
 	background: #fff;
+	margin-bottom: 180px;
 }
+
+.final-text{
+	color: black;
+	font-size: 14px;
+	font-weight: 400;
+	padding: 60px 15px 130px 15px;
+	text-align: center;
+}
+
 .input-box { padding: 15px }
 .input-box > .input-label
 {
