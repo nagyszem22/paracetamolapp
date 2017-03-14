@@ -1,4 +1,151 @@
-.hello
+body  { background: #eee }
+.header
 {
-	color: red;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 60px;
+	border-bottom: 2px solid #ddd;
+	background: #fff;
+}
+.page-title 
+{
+	max-width: 500px;
+	margin: 100px auto 30px auto;
+	color: #999;
+	font-size: 28px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	text-align: center;
+}
+.content
+{
+	overflow: hidden;
+	margin: 20px auto;
+	max-width: 500px;
+	min-height: 300px;
+	border-right: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	border-bottom: 2px solid #ddd;
+	background: #fff;
+}
+.input-box { padding: 15px }
+.input-box > .input-label
+{
+	color: #444;
+	font-size: 13px;
+	font-weight: 600;
+	padding-bottom: 5px;
+}
+.input-box > .input-label > .help-button
+{
+	paosition: relative;
+	cursor: pointer;
+}
+.input-box > .input-label > .help-button:hover { color: #16a085 }
+.input-box > .input-label > .help-button:active { top: 1px }
+.input-box > .help-text
+{
+	display: none;
+	font-size: 12px;
+	margin-top: 5px;
+}
+.input-box > input
+{
+	width: 100%;
+	color: #444;
+	font-size: 13px;
+	padding: 10px 10px;
+	border: 1px solid #ddd;
+}
+.next-button
+{
+	position: relative;
+	float: right;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 600;
+	color: #fff;
+	background: #16a085;
+	border-bottom: 2px solid #0f7a65;
+	margin: 15px;
+	cursor: pointer;
+}
+.next-button:hover
+{
+	background: #117a65;
+	border-bottom: 2px solid #0b5647;
+}
+.next-button:active { top: 1px }
+
+.image-cover
+{
+	height: 130px;
+	border-bottom: 1px solid #ddd;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.image-cover.yellow { background: url('../media/images/yellow.jpg') no-repeat center center }
+.image-cover.blue 
+{ 
+	margin-top: 25px;
+	border-top: 1px solid #ddd;
+	background: url('../media/images/blue.jpg') no-repeat center center;
+}
+.infusion-title
+{
+	padding: 20px;
+	font-size: 16px;
+	font-weight: 600;
+	color: #444;
+	text-align: center;
+	border-top: 1px solid #ddd;
+}
+.infusion-title:first-child { border-top: none }
+.dosage-container { overflow: hidden }
+.dosage-container > .treatment-container
+{
+	float: left;
+	width: 199px;
+	height: 270px;
+	padding: 10px;
+}
+.dosage-container > .treatment-container > .image-box
+{
+	width: 200px;
+	height: 200px;
+}
+.dosage-container > .treatment-container > .image-box.first 
+{ 
+	background: url('../media/images/first.jpg') no-repeat center center;
+	-webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+}
+.dosage-container > .treatment-container > .image-box.second 
+{ 
+	background: url('../media/images/second.jpg') no-repeat center center;
+	-webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+}
+.dosage-container > .treatment-container > .image-box.third 
+{ 
+	background: url('../media/images/third.jpg') no-repeat center center;
+	-webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+}
+.dosage-container > .treatment-container > .text-box
+{
+	color: #444;
+	font-size: 13px;
+	padding-top: 10px;
 }

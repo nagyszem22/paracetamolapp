@@ -2,12 +2,41 @@
 <html>
 <head>
 	<title>Paracetamol overdose</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/icons.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
- <span class="hello">Hello World!</span>
+ <div class="header"></div>
+ <div class="page-title">Paracetamol Overdose Patient Form</div>
+ <div class="content">
+ 	<div class="input-box">
+ 		<div class="input-label">Current time <span class="help-button icon-help_outline"></span></div>
+ 		<input type="datetime-local" name="currentDateTime">
+ 		<div class="help-text">The date and time when the form was created.</div>
+ 	</div>
+ 	<div class="input-box">
+ 		<div class="input-label">Name of the patient</div>
+ 		<input type="text" name="name" placeholder="John Doe">
+ 	</div>
+ 	<div class="input-box">
+ 		<div class="input-label">Birthday of the patient</div>
+ 		<input type="datetime-local" name="birthday">
+ 	</div>
+ 	<div class="input-box">
+ 		<div class="input-label">NHS Number</div>
+ 		<input type="number" name="nhsNumber" placeholder="54654631">
+ 	</div>
+ 	<div class="input-box">
+ 		<div class="input-label">Ingestion time <span class="help-button icon-help_outline"></span></div>
+ 		<input type="datetime-local" name="ingestionDateTime">
+ 		<div class="help-text">The date and time when the patient ingested paracetamol.</div>
+ 	</div>
+ 	<div class="next-button" data-link="http://paracetamol.app/first_blood.html">Next</div>
+ </div>
 </body>
 </html>
