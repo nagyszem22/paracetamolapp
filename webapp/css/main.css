@@ -1,23 +1,34 @@
-body  { background: #eee }
+body  {
+	background: #eee;
+	background: url('../media/images/background.jpg') no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
 .header
 {
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 60px;
+	height: 30px;
 	border-bottom: 2px solid #ddd;
 	background: #fff;
 }
 .page-title 
 {
-	max-width: 500px;
-	margin: 100px auto 30px auto;
-	color: #999;
-	font-size: 28px;
+	max-width: 700px;
+	height: 100px;
+	padding-top: 22px;
+	margin: 100px auto 40px auto;
+	color: black;
+	font-size: 40px;
 	font-family: 'Raleway', sans-serif;
-	font-weight: 600;
+	font-weight: 400;
 	text-align: center;
+	background-color: #b3e6ff;
+	border: 2px solid white;
 }
 .content
 {
@@ -82,6 +93,8 @@ body  { background: #eee }
 	border-bottom: 2px solid #0b5647;
 }
 .next-button:active { top: 1px }
+
+.image-background.background{ background: url('../media/images/background.jpg') no-repeat center center }
 
 .image-cover
 {
