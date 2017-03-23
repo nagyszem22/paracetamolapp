@@ -11,14 +11,19 @@
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
- <div class="header"></div>
- <div class="page-title">Dosage Calculation</div>
+ <!-- div class="header"></div>
+ <div class="page-title">Dosage Calculation</div-->
  <div class="content" style="max-width: 600px">
- 	<div class="infusion-title">First Infusion</div>
+ 	<div class="page-title">
+ 		<div class="title">Dosage Calculation</div>
+ 		<div class="description">Submit the details of your patient's initial blood tests</div>
+ 	</div>
+ 	<div class="infusion-title" style="border-top: none">First Infusion</div>
+ 	<input type="number" id="weight">
  	<div class="dosage-container">
  		<div class="treatment-container">
  			<div class="image-box first"></div>
- 			<div class="text-box">82.5ml of Acetylcysteine (each ampule=200mg/ml)</div>
+ 			<div class="text-box"><span id="firstAmpule">82.5</span>ml of Acetylcysteine (each ampule=200mg/ml)</div>
  		</div>
  		<div class="treatment-container">
  			<div class="image-box second"></div>
@@ -33,7 +38,7 @@
  	<div class="dosage-container">
  		<div class="treatment-container">
  			<div class="image-box first"></div>
- 			<div class="text-box">82.5ml of Acetylcysteine (each ampule=200mg/ml)</div>
+ 			<div class="text-box"><span id="secondAmpule">82.5</span>ml of Acetylcysteine (each ampule=200mg/ml)</div>
  		</div>
  		<div class="treatment-container">
  			<div class="image-box second"></div>
@@ -48,7 +53,7 @@
  	<div class="dosage-container">
  		<div class="treatment-container">
  			<div class="image-box first"></div>
- 			<div class="text-box">82.5ml of Acetylcysteine (each ampule=200mg/ml)</div>
+ 			<div class="text-box"><span id="thirdAmpule">82.5</span>ml of Acetylcysteine (each ampule=200mg/ml)</div>
  		</div>
  		<div class="treatment-container">
  			<div class="image-box second"></div>
