@@ -59,6 +59,7 @@ body  {
 }
 
 .input-box { padding: 15px }
+.weight-scale > .input-label,
 .input-box > .input-label
 {
 	color: #444;
@@ -114,7 +115,7 @@ body  {
 
 .image-cover
 {
-	height: 110px;
+	height: 130px;
 	border-bottom: 1px solid #ddd;
 }
 .image-cover.yellow 
@@ -149,7 +150,7 @@ body  {
 .dosage-container > .treatment-container
 {
 	float: left;
-	width: 199px;
+	width: 233px;
 	height: 270px;
 	padding: 10px;
 }
@@ -186,16 +187,35 @@ body  {
 	padding-top: 10px;
 }
 
+.weight-scale
+{
+	padding: 15px;
+	margin: 10px 0;
+	border-bottom: 1px solid #ddd;
+}
+.weight-scale > .input-label
+{
+	margin-bottom: 15px;
+}
+.weight-scale > #weight
+{
+	margin-top: 15px;
+	width: 70px;
+	padding: 5px;
+	border: 1px solid #ddd;
+}
+
 
 
 /** Colors **/
 ol.progress-track {
   display: table;
   list-style-type: none;
-  margin: 0;
-  padding: 2em 1em;
+  margin: 15px;
+  padding: 25px 0;
   table-layout: fixed;
   width: 670px;
+  border-bottom: 1px solid #ddd;
 }
 ol.progress-track li {
   display: table-cell;
@@ -227,7 +247,7 @@ ol.progress-track li .progress-text {
   top: 10px;
 }
 ol.progress-track li.progress-done {
-  border-top: 7px solid #87ba51;
+  border-top: 7px solid #00B241;
   transition: border-color 1s ease-in-out;
   -webkit-transition: border-color 1s ease-in-out;
   -moz-transition: border-color 1s ease-in-out;
@@ -246,7 +266,7 @@ ol.progress-track li.progress-done.progress-current .icon-wrap .icon-down-arrow 
 }
 ol.progress-track li.progress-done .icon-wrap {
   background-color: #4a6a28;
-  border: 5px solid #87ba51;
+  border: 5px solid #00B241;
 }
 ol.progress-track li.progress-todo {
   border-top: 7px solid #DDD;
