@@ -63,7 +63,7 @@ body  {
 }
 .input-box > .input-label > .help-button
 {
-	paosition: relative;
+	position: relative;
 	cursor: pointer;
 }
 .input-box > .input-label > .help-button:hover { color: #16a085 }
