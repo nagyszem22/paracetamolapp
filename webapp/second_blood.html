@@ -116,12 +116,20 @@
  		<div class="input-label">International Normalised Ratio (INR) or Prothrombin Time (PT)</div>
  		<input type="text" id="datetimepicker4" name="inrDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
  	</div>
- 	<div class="next-button" data-link="/finish.html">Submit Form</div>
-	 <div class="next-button" style="float: left" data-link="/treatments.html">Previous</div>
+ 	<div class="next-button" style="float: left" data-link="/treatments.html">Previous</div>
+	 <button class="btn btn--secondary btn-demo js-tingle-modal-2">Submit Form</button>
+	 <div class="tingle-demo tingle-demo-tiny">
+		 <h1>Form Submission</h1>
+		 <p>You are about to submit this form. The form can no longer be edited once it has been submitted.</p>
+	 </div>
+
  </div>
  </div>
 
  <script src="js/pikaday.js"></script>
+ <link rel="stylesheet" href="css/tingle.css">
+ <link rel="stylesheet" href="css/demo.css">
+ <script src="js/tingle.js"></script>
  <script>
 
      var timepicker1 = new Pikaday(
@@ -174,6 +182,26 @@
              autoClose: false,
              use24hour: false
          });
+
+     var modalTinyBtn = new tingle.modal({
+         footer: true
+     });
+     var btn2 = document.querySelector('.js-tingle-modal-2');
+
+     btn2.addEventListener('click', function(){
+         modalTinyBtn.open();
+     });
+
+     modalTinyBtn.setContent(document.querySelector('.tingle-demo-tiny').innerHTML);
+
+     modalTinyBtn.addFooterBtn('Submit Form', 'tingle-btn tingle-btn--primary tingle-btn--pull-right', function() {
+         window.location.href = SITE_INDEX+ '/finish.html';
+     });
+
+
+     modalTinyBtn.addFooterBtn('Cancel', 'tingle-btn tingle-btn--danger', function(){
+         modalTinyBtn.close();
+     });
 
 
  </script>

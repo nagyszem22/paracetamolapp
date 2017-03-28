@@ -1,0 +1,37 @@
+
+<button class="btn btn--secondary btn-demo js-tingle-modal-2">Need buttons?</button>
+
+<div class="tingle-demo tingle-demo-tiny">
+    <h1>A small content</h1>
+    <p>Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+</div>
+
+<link rel="stylesheet" href="css/tingle.css">
+<link rel="stylesheet" href="css/demo.css">
+<script src="js/tingle.js"></script>
+
+<script>
+
+    var modalTinyBtn = new tingle.modal({
+        footer: true
+    });
+    var btn2 = document.querySelector('.js-tingle-modal-2');
+
+    btn2.addEventListener('click', function(){
+        modalTinyBtn.open();
+    });
+
+    modalTinyBtn.setContent(document.querySelector('.tingle-demo-tiny').innerHTML);
+
+    modalTinyBtn.addFooterBtn('Primary action', 'tingle-btn tingle-btn--primary tingle-btn--pull-right', function() {
+        alert('click on primary button!');
+    });
+
+    modalTinyBtn.addFooterBtn('Cancel', 'tingle-btn tingle-btn--default tingle-btn--pull-right', function(){
+        modalTinyBtn.close();
+    });
+
+    modalTinyBtn.addFooterBtn('Danger!', 'tingle-btn tingle-btn--danger', function(){
+        alert('click on danger button!');
+    });
+</script>
