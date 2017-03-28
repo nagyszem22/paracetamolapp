@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress ALL -->
 <html xmlns="http://www.w3.org/1999/html">
 <head>
 	<title>Paracetamol overdose</title>
@@ -7,12 +8,14 @@
 	<link rel="stylesheet" type="text/css" href="css/icons.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/pikaday.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+
 </head>
 <body>
 <div class="header"></div>
- <div class="page-title">Paracetamol Overdose Patient Form</div>
+ <div class="page-title"> . </div>
  <div class="layer"></div>
  <div class="container-main">
      <div class="translucent"></div>
@@ -98,7 +101,7 @@
  	    </div>
  	    <div class="input-box">
  		    <div class="input-label">Current time <span class="help-button icon-help_outline"></span></div>
- 		    <input type="datetime-local" name="currentDateTime">
+ 		    <input type="text" id="datetimepicker1" name="currentDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
  		    <div class="help-text">The date and time when the form was created.</div>
  	    </div>
  	    <div class="input-box">
@@ -107,7 +110,7 @@
  	    </div>
  	    <div class="input-box">
  		    <div class="input-label">Birthday of the patient</div>
- 		    <input type="date" name="birthday">
+ 		    <input type="text" id="datepicker" name="birthday" placeholder="DD/MM/YYYY - hh:mm:ss">
  	    </div>
  	    <div class="input-box">
  		    <div class="input-label">NHS Number</div>
@@ -115,11 +118,53 @@
  	    </div>
  	    <div class="input-box">
  		    <div class="input-label">Ingestion time <span class="help-button icon-help_outline"></span></div>
- 		    <input type="datetime-local" name="ingestionDateTime">
+ 		    <input type="text" id="datetimepicker2" name="ingestionDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
  		    <div class="help-text">The date and time when the patient ingested paracetamol.</div>
  	    </div>
  	    <div class="next-button" data-link="/first_blood.html">Next</div>
      </div>
  </div>
+
+<script src="js/pikaday.js"></script>
+<script>
+
+    var picker = new Pikaday(
+        {
+            field: document.getElementById('datepicker'),
+            firstDay: 1,
+            minDate: new Date(1900, 0, 1),
+            maxDate: new Date(2020, 12, 31),
+            yearRange: [1900,2020],
+            showTime: false,
+        });
+
+    var timepicker1 = new Pikaday(
+        {
+            field: document.getElementById('datetimepicker1'),
+            firstDay: 1,
+            minDate: new Date(2000, 0, 1),
+            maxDate: new Date(2020, 12, 31),
+            yearRange: [2000,2020],
+
+            showTime: true,
+            autoClose: false,
+            use24hour: false
+        });
+
+    var timepicker2 = new Pikaday(
+        {
+            field: document.getElementById('datetimepicker2'),
+            firstDay: 1,
+            minDate: new Date(2000, 0, 1),
+            maxDate: new Date(2020, 12, 31),
+            yearRange: [2000,2020],
+
+            showTime: true,
+            autoClose: false,
+            use24hour: false
+        });
+
+</script>
+
 </body>
 </html>

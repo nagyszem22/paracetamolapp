@@ -7,14 +7,15 @@
 	<link rel="stylesheet" type="text/css" href="css/icons.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="css/pikaday.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
+
  <div class="header"></div>
- <div class="page-title">Initial blood tests</div>
- <div class="layer">
- </div>
+ <div class="page-title"> . </div>
+ <div class="layer"></div>
  <div class="container-main">
 	 <div class="translucent"></div>
  <div class="content">
@@ -101,27 +102,103 @@
 	 <div class="image-background background"></div>
  	<div class="input-box">
  		<div class="input-label">Paracetamol Concentration</div>
- 		<input type="datetime-local" name="paracetamolConcDateTime">
+ 		<input type="text" id="datetimepicker1" name="paracetamolConcDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
  	</div>
  	<div class="input-box">
  		<div class="input-label">Urea and Electrolytes (U and E)</div>
- 		<input type="datetime-local" name="ureaDateTime">
+ 		<input type="text" id="datetimepicker2" name="ureaDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
  	</div>
  	<div class="input-box">
  		<div class="input-label">Liver Function Test (LFT)</div>
- 		<input type="datetime-local" name="liverDateTime">
+ 		<input type="text" id="datetimepicker3" name="liverDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
  	</div>
  	<div class="input-box">
  		<div class="input-label">Creatine</div>
- 		<input type="datetime-local" name="creatineDateTime">
+ 		<input type="text" id="datetimepicker4" name="creatineDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
  	</div>
  	<div class="image-cover blue"></div>
  	<div class="input-box">
  		<div class="input-label">International Normalised Ratio (INR) or Prothrombin Time (PT)</div>
- 		<input type="datetime-local" name="inrDateTime">
- 	</div>
- 	<div class="next-button" data-link="/chart.html">Next</div>
+ 		<input type="text" id="datetimepicker5" name="inrDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
+	</div>
+
+     <div class="next-button" data-link="/chart.html">Next</div>
+     <div class="next-button" style="float: left" data-link="/index.html">Previous</div>
+
+
+
  </div>
  </div>
+
+ <script src="js/pikaday.js"></script>
+ <script>
+
+     var timepicker1 = new Pikaday(
+         {
+             field: document.getElementById('datetimepicker1'),
+             firstDay: 1,
+             minDate: new Date(1900, 0, 1),
+             maxDate: new Date(2020, 12, 31),
+             yearRange: [1900,2020],
+
+             showTime: true,
+             autoClose: false,
+             use24hour: false
+         });
+
+     var timepicker2 = new Pikaday(
+         {
+             field: document.getElementById('datetimepicker2'),
+             firstDay: 1,
+             minDate: new Date(1900, 0, 1),
+             maxDate: new Date(2020, 12, 31),
+             yearRange: [1900,2020],
+
+             showTime: true,
+             autoClose: false,
+             use24hour: false
+         });
+
+     var timepicker3 = new Pikaday(
+         {
+             field: document.getElementById('datetimepicker3'),
+             firstDay: 1,
+             minDate: new Date(2000, 0, 1),
+             maxDate: new Date(2020, 12, 31),
+             yearRange: [2000,2020],
+
+             showTime: true,
+             autoClose: false,
+             use24hour: false
+         });
+
+     var timepicker4 = new Pikaday(
+         {
+             field: document.getElementById('datetimepicker4'),
+             firstDay: 1,
+             minDate: new Date(2000, 0, 1),
+             maxDate: new Date(2020, 12, 31),
+             yearRange: [2000,2020],
+
+             showTime: true,
+             autoClose: false,
+             use24hour: false
+         });
+
+     var timepicker5 = new Pikaday(
+         {
+             field: document.getElementById('datetimepicker5'),
+             firstDay: 1,
+             minDate: new Date(2000, 0, 1),
+             maxDate: new Date(2020, 12, 31),
+             yearRange: [2000,2020],
+
+             showTime: true,
+             autoClose: false,
+             use24hour: false
+         });
+
+ </script>
+
 </body>
 </html>

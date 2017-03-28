@@ -31,6 +31,11 @@ $(document).ready(function(){
 		window.location.href = SITE_INDEX+link;
 	});
 
+    $('.previous-button').on('click', function() {
+        var link = $(this).attr('data-link');
+        window.location.href = SITE_INDEX+link;
+    });
+
 	if ($('#weight').length > 0) {
 		calculatedose();
 	}

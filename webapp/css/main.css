@@ -93,7 +93,7 @@ body  {
 .weight-scale > .input-label,
 .input-box > .input-label
 {
-	color: white;
+	color: #ffffff;
 	font-size: 18px;
 	font-weight: 400;
 	padding-bottom: 5px;
@@ -113,6 +113,7 @@ body  {
 }
 .input-box > input
 {
+    background-color: rgba(254, 254, 254, 0.8);
 	width: 100%;
 	color: #1c1c1c;
 	font-size: 15px;
@@ -142,6 +143,30 @@ body  {
 	border-bottom: 2px solid #08171c;
 }
 .next-button:active { top: 1px }
+
+.previous-button
+{
+    position: relative;
+    float: left;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background: rgb(113, 191, 255);
+    border-bottom: 2px solid rgb(105, 168, 226);
+    margin: 15px;
+    cursor: pointer;
+}
+
+.previous-button:hover
+{
+    background: #135258;
+    border-bottom: 2px solid #08171c;
+}
+.previous-button:active { top: 1px }
 
 .image-background.background{ background: url('../media/images/background.jpg') no-repeat center center }
 
@@ -226,6 +251,7 @@ body  {
 
 .weight-scale
 {
+    color: white;
 	padding: 15px;
 	margin: 10px 0;
 	border-bottom: 1px solid #eeeeee;
@@ -233,9 +259,11 @@ body  {
 .weight-scale > .input-label
 {
 	margin-bottom: 15px;
+
 }
 .weight-scale > #weight
 {
+
 	margin-top: 15px;
 	width: 70px;
 	padding: 5px;
@@ -307,7 +335,7 @@ ol.progress-track li.progress-done .icon-wrap {
 }
 ol.progress-track li.progress-todo {
   border-top: 7px solid #d1d1d1;
-  color: black;
+  color: #d1d1d1;
 }
 ol.progress-track li.progress-todo .icon-wrap {
   background-color: #FFF;
