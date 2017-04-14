@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a14cf904-3506-40cb-bbfa-8a72a3be5c15" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webapp/css/opentip.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webapp/js/opentip-jquery-excanvas.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/css/demo.css" afterPath="$PROJECT_DIR$/webapp/css/demo.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/css/main.css" afterPath="$PROJECT_DIR$/webapp/css/main.css" />
@@ -26,8 +28,28 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="13" lean-forward="false" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+            <state relative-caret-position="390">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opentip-jquery-excanvas.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/js/opentip-jquery-excanvas.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7838">
+              <caret line="2721" column="7" lean-forward="false" selection-start-line="2721" selection-start-column="7" selection-end-line="2721" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opentip.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/css/opentip.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4155">
+              <caret line="277" column="1" lean-forward="false" selection-start-line="277" selection-start-column="1" selection-end-line="277" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -36,8 +58,18 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="78" column="23" lean-forward="true" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+            <state relative-caret-position="197">
+              <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="icons.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/css/icons.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="1169" column="18" lean-forward="false" selection-start-line="1169" selection-start-column="1" selection-end-line="1169" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -46,8 +78,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="32" column="53" lean-forward="false" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+            <state relative-caret-position="330">
+              <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -57,12 +89,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="welcome.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webapp/welcome.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1289">
-              <caret line="173" column="7" lean-forward="false" selection-start-line="173" selection-start-column="7" selection-end-line="173" selection-end-column="7" />
+            <state relative-caret-position="944">
+              <caret line="115" column="86" lean-forward="false" selection-start-line="115" selection-start-column="86" selection-end-line="115" selection-end-column="86" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nouislider.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/js/nouislider.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="second_blood.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/second_blood.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="668">
+              <caret line="185" column="5" lean-forward="true" selection-start-line="185" selection-start-column="5" selection-end-line="203" selection-end-column="8" />
+              <folding>
+                <element signature="n#style#0;n#div#7;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1490715374000" expanded="true" signature="3084:4346" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,59 +134,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="finish.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webapp/finish.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="125" column="50" lean-forward="false" selection-start-line="125" selection-start-column="50" selection-end-line="125" selection-end-column="50" />
-              <folding>
-                <element signature="n#style#0;n#h1#0;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testing.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/testing.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="first_blood.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/first_blood.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="125" column="72" lean-forward="false" selection-start-line="125" selection-start-column="6" selection-end-line="125" selection-end-column="72" />
-              <folding>
-                <element signature="n#style#0;n#div#10;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="second_blood.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/second_blood.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="185" column="5" lean-forward="true" selection-start-line="185" selection-start-column="5" selection-end-line="203" selection-end-column="8" />
-              <folding>
-                <element signature="n#style#0;n#div#7;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1490715374000" expanded="true" signature="3084:4346" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -152,6 +162,9 @@
       <find>container</find>
       <find>kgs</find>
       <find>Date</find>
+      <find>icon-</find>
+      <find>icon-help_outline</find>
+      <find>help</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -173,12 +186,15 @@
         <option value="$PROJECT_DIR$/webapp/css/demo.css" />
         <option value="$PROJECT_DIR$/webapp/first_blood.html" />
         <option value="$PROJECT_DIR$/webapp/js/jquery.cookie.js" />
+        <option value="$PROJECT_DIR$/webapp/test.html" />
+        <option value="$PROJECT_DIR$/webapp/finish.html" />
+        <option value="$PROJECT_DIR$/webapp/js/opentip-jquery-excanvas.js" />
+        <option value="$PROJECT_DIR$/webapp/media/images/opentip.css" />
+        <option value="$PROJECT_DIR$/webapp/css/opentip.css" />
+        <option value="$PROJECT_DIR$/webapp/index.html" />
         <option value="$PROJECT_DIR$/webapp/js/main.js" />
         <option value="$PROJECT_DIR$/webapp/css/main.css" />
-        <option value="$PROJECT_DIR$/webapp/test.html" />
         <option value="$PROJECT_DIR$/webapp/welcome.html" />
-        <option value="$PROJECT_DIR$/webapp/index.html" />
-        <option value="$PROJECT_DIR$/webapp/finish.html" />
       </list>
     </option>
   </component>
@@ -216,16 +232,6 @@
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="paracetamolapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.jetbrains.php.config.library.PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="paracetamolapp" />
@@ -319,6 +325,12 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="FullScreen" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/webapp/css" />
+    </key>
   </component>
   <component name="RunManager" selected="PHP Script.index.php">
     <configuration default="false" name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/webapp/index.php">
@@ -406,12 +418,12 @@
       <workItem from="1490705034486" duration="6216000" />
       <workItem from="1490714247558" duration="2671000" />
       <workItem from="1490799721960" duration="527000" />
-      <workItem from="1492040135695" duration="8733000" />
+      <workItem from="1492040135695" duration="15192000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55454000" />
+    <option name="totallyTimeSpent" value="61913000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="14" width="1280" height="773" extended-state="6" />
@@ -466,12 +478,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webapp/media/images/Mail.jpg" />
-    <entry file="file://$PROJECT_DIR$/webapp/media/images/first.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/chart.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -671,21 +677,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/css/tingle.min.css" />
     <entry file="file://$PROJECT_DIR$/webapp/js/tingle.min.js" />
-    <entry file="file://$PROJECT_DIR$/webapp/js/nouislider.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/css/icons.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/css/normalize.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -731,7 +722,7 @@
         <state relative-caret-position="465">
           <caret line="125" column="72" lean-forward="false" selection-start-line="125" selection-start-column="6" selection-end-line="125" selection-end-column="72" />
           <folding>
-            <element signature="n#style#0;n#div#10;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#10;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -744,21 +735,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/second_blood.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="185" column="5" lean-forward="true" selection-start-line="185" selection-start-column="5" selection-end-line="203" selection-end-column="8" />
-          <folding>
-            <element signature="n#style#0;n#div#7;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1490715374000" expanded="true" signature="3084:4346" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/testing.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="173" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/finish.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="125" column="50" lean-forward="false" selection-start-line="125" selection-start-column="50" selection-end-line="125" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/js/opentip-jquery-excanvas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7838">
+          <caret line="2721" column="7" lean-forward="false" selection-start-line="2721" selection-start-column="7" selection-end-line="2721" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/css/opentip.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4155">
+          <caret line="277" column="1" lean-forward="false" selection-start-line="277" selection-start-column="1" selection-end-line="277" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/css/icons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="1169" column="18" lean-forward="false" selection-start-line="1169" selection-start-column="1" selection-end-line="1169" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -773,34 +795,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="78" column="23" lean-forward="true" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="13" lean-forward="false" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/test.html">
+    <entry file="file://$PROJECT_DIR$/webapp/js/nouislider.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="173" selection-end-column="7" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/second_blood.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="185" column="5" lean-forward="true" selection-start-line="185" selection-start-column="5" selection-end-line="203" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#div#7;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1490715374000" expanded="true" signature="3084:4346" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="32" column="53" lean-forward="false" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+        <state relative-caret-position="330">
+          <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -809,21 +826,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/welcome.html">
+    <entry file="file://$PROJECT_DIR$/webapp/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1289">
-          <caret line="173" column="7" lean-forward="false" selection-start-line="173" selection-start-column="7" selection-end-line="173" selection-end-column="7" />
+        <state relative-caret-position="390">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/finish.html">
+    <entry file="file://$PROJECT_DIR$/webapp/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="125" column="50" lean-forward="false" selection-start-line="125" selection-start-column="50" selection-end-line="125" selection-end-column="50" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="197">
+          <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/welcome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="944">
+          <caret line="115" column="86" lean-forward="false" selection-start-line="115" selection-start-column="86" selection-end-line="115" selection-end-column="86" />
+          <folding />
         </state>
       </provider>
     </entry>
