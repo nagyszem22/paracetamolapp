@@ -1,172 +1,41 @@
 <!DOCTYPE html>
-<!--suppress ALL -->
-<html xmlns="http://www.w3.org/1999/html">
+<html>
 <head>
-    <title>Paracetamol overdose</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/icons.css">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" href="css/pikaday.css">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+	<title>Paracetamol overdose</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/icons.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="css/pikaday.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script src="js/pikaday.js"></script>
+	<script src="js/opentip-jquery-excanvas.js"></script>
+	<link href="css/opentip.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
 <div class="header"></div>
- <div class="page-title"> . </div>
- <div class="layer"></div>
- <div class="container-main">
-     <div class="translucent"></div>
-     <div class="content">
- 	    <ol class="progress-track">
-	    <li class="progress-done progress-current">
-	        <center>
-	        <div class="icon-wrap">
-	            <svg class="icon-state icon-check-mark">
-	            <use xlink:href="#icon-check-mark"></use>
-	            </svg>
+<div class="page-title"> .</div>
+<div class="layer">
+</div>
+<div class="container-main">
+	<div class="translucent"></div>
+	<div class="content" style="text-align: center">
 
-	            <svg class="icon-state icon-down-arrow">
-	            <use xlink:href="#icon-down-arrow"></use>
-	            </svg>
-	        </div>
-	        <span class="progress-text">Patient Details</span>
-	        </center>
-	    </li>
+		<div class="page-title">
+			<div class="title" style="text-align: center">Welcome to the Paracetamol Overdose Treatment Form</div>
+			<div class="description" style="text-align: center">This Form is to be used for health purposes.</div>
+		</div>
+		<div class="final-text">
+			<p>The purpose of this form is to record a Paracetamol Overdose and treat it accordingly provided treatment will be needed.</p>
+			<p>If you wish to create a new form please click the button below.</p>
+		</div>
+		<div class="start-button" data-link="/welcome.html">Start New Form</div>
+	</div>
+</div>
 
-	    <li class="progress-todo">
-	        <center>
-	        <div class="icon-wrap">
-	            <svg class="icon-state icon-check-mark">
-	             <use xlink:href="#icon-check-mark"></use>
-	            </svg>
-
-	            <svg class="icon-state icon-down-arrow">
-	             <use xlink:href="#icon-down-arrow"></use>
-	            </svg>
-	        </div>
-	        <span class="progress-text">Initial Blood Tests</span>
-	        </center>
-	    </li>
-
-	    <li class="progress-todo">
-	        <center>
-	        <div class="icon-wrap">
-	            <svg class="icon-state icon-check-mark">
-	            <use xlink:href="#icon-check-mark"></use>
-	            </svg>
-
-	            <svg class="icon-state icon-down-arrow">
-	            <use xlink:href="#icon-down-arrow"></use>
-	            </svg>
-	        </div>
-	        <span class="progress-text">Treatment line</span>
-	        </center>
-	    </li>
-
-	    <li class="progress-todo">
-	        <center>
-	        <div class="icon-wrap">
-                <svg class="icon-state icon-check-mark">
-	            <use xlink:href="#icon-check-mark"></use>
-	            </svg>
-
-	            <svg class="icon-state icon-down-arrow">
-	            <use xlink:href="#icon-down-arrow"></use>
-	            </svg>
-	        </div>
-	        <span class="progress-text">Dosage Calculation</span>
-	        </center>
-	    </li>
-	    <li class="progress-todo">
-	        <center>
-	        <div class="icon-wrap">
-	            <svg class="icon-state icon-check-mark">
-	            <use xlink:href="#icon-check-mark"></use>
-	            </svg>
-
-	            <svg class="icon-state icon-down-arrow">
-	            <use xlink:href="#icon-down-arrow"></use>
-	            </svg>
-	        </div>
-	        <span class="progress-text">Final Blood Tests</span>
-	        </center>
-	    </li>
-	    </ol>
- 	    <div class="page-title">
- 		    <div class="title">Patient Details</div>
- 		    <div class="description">Submit the details of your patient</div>
- 	    </div>
- 	    <div class="input-box">
- 		    <div class="input-label">Current time <span class="help-button icon-help_outline"></span></div>
- 		    <input type="text" id="datetimepicker1" name="currentDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
- 		    <div class="help-text">The date and time when the form was created.</div>
- 	    </div>
- 	    <div class="input-box">
- 		    <div class="input-label">Name of the patient</div>
- 		    <input type="text" name="name" placeholder="John Doe">
- 	    </div>
- 	    <div class="input-box">
- 		    <div class="input-label">Birthday of the patient</div>
- 		    <input type="text" id="datepicker" name="birthday" placeholder="DD/MM/YYYY - hh:mm:ss">
- 	    </div>
- 	    <div class="input-box">
- 		    <div class="input-label">NHS Number</div>
- 		    <input type="number" name="nhsNumber" placeholder="54654631">
- 	    </div>
- 	    <div class="input-box">
- 		    <div class="input-label">Ingestion time <span class="help-button icon-help_outline"></span></div>
- 		    <input type="text" id="datetimepicker2" name="ingestionDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
- 		    <div class="help-text">The date and time when the patient ingested paracetamol.</div>
- 	    </div>
-         <div class="next-button" data-link="/first_blood.html">Next</div>
-     </div>
- </div>
-
-<script src="js/pikaday.js"></script>
-
-<script>
-
-    var picker = new Pikaday(
-        {
-            field: document.getElementById('datepicker'),
-            firstDay: 1,
-            minDate: new Date(1900, 0, 1),
-            maxDate: new Date(2020, 12, 31),
-            yearRange: [1900,2020],
-            showTime: false,
-        });
-
-    var timepicker1 = new Pikaday(
-        {
-            field: document.getElementById('datetimepicker1'),
-            firstDay: 1,
-            minDate: new Date(2000, 0, 1),
-            maxDate: new Date(2020, 12, 31),
-            yearRange: [2000,2020],
-
-            showTime: true,
-            autoClose: false,
-            use24hour: false
-        });
-
-    var timepicker2 = new Pikaday(
-        {
-            field: document.getElementById('datetimepicker2'),
-            firstDay: 1,
-            minDate: new Date(2000, 0, 1),
-            maxDate: new Date(2020, 12, 31),
-            yearRange: [2000,2020],
-
-            showTime: true,
-            autoClose: false,
-            use24hour: false
-        });
-
-
-</script>
 
 </body>
 </html>

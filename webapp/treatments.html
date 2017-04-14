@@ -8,9 +8,12 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/nouislider.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/scrolling-nav.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/nouislider.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="js/scrolling-nav.js"></script>
 </head>
 <body>
  <div class="header"></div>
@@ -20,135 +23,184 @@
  <div class="container-main">
 	 <div class="translucent"></div>
  <div class="content">
- 	<ol class="progress-track">
-	  <li class="progress-done">
-	    <center>
-	      <div class="icon-wrap">
-	        <svg class="icon-state icon-check-mark">
-	          <use xlink:href="#icon-check-mark"></use>
-	        </svg>
+	 <section id="page-top" class="top-page">
+		<ol class="progress-track">
+		  <li class="progress-done">
+			<center>
+			  <div class="icon-wrap">
+				<svg class="icon-state icon-check-mark">
+				  <use xlink:href="#icon-check-mark"></use>
+				</svg>
 
-	        <svg class="icon-state icon-down-arrow">
-	          <use xlink:href="#icon-down-arrow"></use>
-	        </svg>
-	      </div>
-	      <span class="progress-text">Patient Details</span>
-	    </center>
-	  </li>
+				<svg class="icon-state icon-down-arrow">
+				  <use xlink:href="#icon-down-arrow"></use>
+				</svg>
+			  </div>
+			  <span class="progress-text">Patient Details</span>
+			</center>
+		  </li>
 
-	  <li class="progress-done">
-	    <center>
-	      <div class="icon-wrap">
-	        <svg class="icon-state icon-check-mark">
-	          <use xlink:href="#icon-check-mark"></use>
-	        </svg>
+		  <li class="progress-done">
+			<center>
+			  <div class="icon-wrap">
+				<svg class="icon-state icon-check-mark">
+				  <use xlink:href="#icon-check-mark"></use>
+				</svg>
 
-	        <svg class="icon-state icon-down-arrow">
-	          <use xlink:href="#icon-down-arrow"></use>
-	        </svg>
-	      </div>
-	      <span class="progress-text">Initial Blood Tests</span>
-	    </center>
-	  </li>
+				<svg class="icon-state icon-down-arrow">
+				  <use xlink:href="#icon-down-arrow"></use>
+				</svg>
+			  </div>
+			  <span class="progress-text">Initial Blood Tests</span>
+			</center>
+		  </li>
 
-	  <li class="progress-done">
-	    <center>
-	      <div class="icon-wrap">
-	        <svg class="icon-state icon-check-mark">
-	          <use xlink:href="#icon-check-mark"></use>
-	        </svg>
+		  <li class="progress-done">
+			<center>
+			  <div class="icon-wrap">
+				<svg class="icon-state icon-check-mark">
+				  <use xlink:href="#icon-check-mark"></use>
+				</svg>
 
-	        <svg class="icon-state icon-down-arrow">
-	          <use xlink:href="#icon-down-arrow"></use>
-	        </svg>
-	      </div>
-	      <span class="progress-text">Treatment line</span>
-	    </center>
-	  </li>
+				<svg class="icon-state icon-down-arrow">
+				  <use xlink:href="#icon-down-arrow"></use>
+				</svg>
+			  </div>
+			  <span class="progress-text">Treatment line</span>
+			</center>
+		  </li>
 
-	  <li class="progress-done progress-current">
-	    <center>
-	      <div class="icon-wrap">
-	        <svg class="icon-state icon-check-mark">
-	          <use xlink:href="#icon-check-mark"></use>
-	        </svg>
+		  <li class="progress-done progress-current">
+			<center>
+			  <div class="icon-wrap">
+				<svg class="icon-state icon-check-mark">
+				  <use xlink:href="#icon-check-mark"></use>
+				</svg>
 
-	        <svg class="icon-state icon-down-arrow">
-	          <use xlink:href="#icon-down-arrow"></use>
-	        </svg>
-	      </div>
-	      <span class="progress-text">Dosage Calculation</span>
-	    </center>
-	  </li>
-	  <li class="progress-todo">
-	    <center>
-	      <div class="icon-wrap">
-	        <svg class="icon-state icon-check-mark">
-	          <use xlink:href="#icon-check-mark"></use>
-	        </svg>
+				<svg class="icon-state icon-down-arrow">
+				  <use xlink:href="#icon-down-arrow"></use>
+				</svg>
+			  </div>
+			  <span class="progress-text">Dosage Calculation</span>
+			</center>
+		  </li>
+		  <li class="progress-todo">
+			<center>
+			  <div class="icon-wrap">
+				<svg class="icon-state icon-check-mark">
+				  <use xlink:href="#icon-check-mark"></use>
+				</svg>
 
-	        <svg class="icon-state icon-down-arrow">
-	          <use xlink:href="#icon-down-arrow"></use>
-	        </svg>
-	      </div>
-	      <span class="progress-text">Final Blood Tests</span>
-	    </center>
-	  </li>
-	</ol>
- 	<div class="page-title">
- 		<div class="title">Dosage Calculation</div>
- 		<div class="description">Submit the details of your patient's initial blood tests</div>
- 	</div>
- 	<div class="weight-scale">
- 		<div class="input-label">Weight of the patient</div>
-	 	<div id="slider"></div>
-	 	<input type="number" id="weight"> kgs
- 	</div>
- 	<div class="infusion-title" style="border-top: none">First Infusion</div>
- 	<div class="dosage-container">
- 		<div class="treatment-container">
- 			<div class="image-box first"></div>
- 			<div class="text-box"><span id="firstAmpule">82.5</span>ml of Acetylcysteine (each ampule=200mg/ml)</div>
- 		</div>
- 		<div class="treatment-container">
- 			<div class="image-box second"></div>
- 			<div class="text-box">In: 200mls of 5% Glucose (or 0.9% Sodium Chloride)</div>
- 		</div>
- 		<div class="treatment-container">
- 			<div class="image-box third"></div>
- 			<div class="text-box">Infusion Rate: 283ml per hour (Duration: 1 Hour)</div>
- 		</div>
- 	</div>
- 	<div class="infusion-title">Second Infusion</div>
- 	<div class="dosage-container">
- 		<div class="treatment-container">
- 			<div class="image-box first"></div>
- 			<div class="text-box"><span id="secondAmpule">82.5</span>ml of Acetylcysteine (each ampule=200mg/ml)</div>
- 		</div>
- 		<div class="treatment-container">
- 			<div class="image-box second"></div>
- 			<div class="text-box">In: 200mls of 5% Glucose (or 0.9% Sodium Chloride)</div>
- 		</div>
- 		<div class="treatment-container">
- 			<div class="image-box third"></div>
- 			<div class="text-box">Infusion Rate: 283ml per hour (Duration: 1 Hour)</div>
- 		</div>
- 	</div>
- 	<div class="infusion-title">Third Infusion</div>
- 	<div class="dosage-container">
- 		<div class="treatment-container">
- 			<div class="image-box first"></div>
- 			<div class="text-box"><span id="thirdAmpule">82.5</span>ml of Acetylcysteine (each ampule=200mg/ml)</div>
- 		</div>
- 		<div class="treatment-container">
- 			<div class="image-box second"></div>
- 			<div class="text-box">In: 200mls of 5% Glucose (or 0.9% Sodium Chloride)</div>
- 		</div>
- 		<div class="treatment-container">
- 			<div class="image-box third"></div>
- 			<div class="text-box">Infusion Rate: 283ml per hour (Duration: 1 Hour)</div>
- 		</div>
- 	</div>
+				<svg class="icon-state icon-down-arrow">
+				  <use xlink:href="#icon-down-arrow"></use>
+				</svg>
+			  </div>
+			  <span class="progress-text">Final Blood Tests</span>
+			</center>
+		  </li>
+		</ol>
+
+
+		<div class="page-title">
+			<div class="title">Dosage Calculation</div>
+		</div>
+		<div class="weight-scale">
+			<div class="input-label" style="padding-top: 15px; font-size: 25px">Weight of the patient</div>
+				<p style="font-size: 20px">Select the unit of measurement for the weight:</p>
+				<p> Input in Kilograms</p>
+			<div id="slider1"></div>
+			<input type="number" id="weight1"> kgs
+			<p>Input in Pounds</p>
+			<div id="slider2"></div>
+			<input type="number" id="weight2"> pounds
+		</div>
+		 <p style="font-size: 20px; text-align: center; color: white">Use the buttons on the left to easily navigate to the infusion results.</p>
+	 </section>
+
+	 <div class="sidebar-nav">
+	 <nav class="navbar navbar-default" role="navigation">
+		 <div class="container">
+			 <!-- Collect the nav links, forms, and other content for toggling -->
+			 <div class="collapse navbar-collapse navbar-ex1-collapse">
+				 <ul class="nav navbar-nav">
+					 <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+					 <li class="hidden">
+						 <a class="page-scroll" href="#page-top">Back to Top</a>
+					 </li>
+					 <li>
+						 <a class="page-scroll" href="#first">First Infusion</a>
+					 </li>
+					 <li>
+						 <a class="page-scroll" href="#second">Second Infusion</a>
+					 </li>
+					 <li>
+						 <a class="page-scroll" href="#third">Third Infusion</a>
+					 </li>
+				 </ul>
+			 </div>
+			 <!-- /.navbar-collapse -->
+		 </div>
+		 <!-- /.container -->
+	 </nav>
+	 </div>
+
+	 <section id="first" class="first-infusion">
+		<div class="infusion-title" style="border-top: none">First Infusion</div>
+		<div class="dosage-container">
+			<div class="treatment-container">
+				<div class="image-box first"></div>
+				<div class="text-box"><span id="firstAmpule">82.5</span>ml of Acetylcysteine (each ampule=200mg/ml)</div>
+			</div>
+			<div class="treatment-container">
+				<div class="image-box second"></div>
+				<div class="text-box">In: 200mls of 5% Glucose (or 0.9% Sodium Chloride)</div>
+			</div>
+			<div class="treatment-container">
+				<div class="image-box third"></div>
+				<div class="text-box">Infusion Rate: 283ml per hour (Duration: 1 Hour)</div>
+			</div>
+		</div>
+		 <p style="font-size: 20px; text-align: center; color: white">The dosages for the first infusion are shown above.</p>
+	 </section>
+
+	 <section id="second" class="second-infusion">
+		<div class="infusion-title">Second Infusion</div>
+		<div class="dosage-container">
+			<div class="treatment-container">
+				<div class="image-box first"></div>
+				<div class="text-box"><span id="secondAmpule">82.5</span>ml of Acetylcysteine (each ampule=200mg/ml)</div>
+			</div>
+			<div class="treatment-container">
+				<div class="image-box second"></div>
+				<div class="text-box">In: 200mls of 5% Glucose (or 0.9% Sodium Chloride)</div>
+			</div>
+			<div class="treatment-container">
+				<div class="image-box third"></div>
+				<div class="text-box">Infusion Rate: 283ml per hour (Duration: 1 Hour)</div>
+			</div>
+		</div>
+		 <p style="font-size: 20px; text-align: center; color: white">The dosages for the second infusion are shown above.</p>
+	 </section>
+
+	 <section id="third" class="third-infusion">
+		<div class="infusion-title">Third Infusion</div>
+		<div class="dosage-container">
+			<div class="treatment-container">
+				<div class="image-box first"></div>
+				<div class="text-box"><span id="thirdAmpule">82.5</span>ml of Acetylcysteine (each ampule=200mg/ml)</div>
+			</div>
+			<div class="treatment-container">
+				<div class="image-box second"></div>
+				<div class="text-box">In: 200mls of 5% Glucose (or 0.9% Sodium Chloride)</div>
+			</div>
+			<div class="treatment-container">
+				<div class="image-box third"></div>
+				<div class="text-box">Infusion Rate: 283ml per hour (Duration: 1 Hour)</div>
+			</div>
+		</div>
+		 <p style="font-size: 20px; text-align: center; color: white">The dosages for the third infusion are shown above.</p>
+	 </section>
+
  	<div class="next-button" data-link="/second_blood.html">Next</div>
 	 <div class="next-button" style="float: left" data-link="/chart.html">Previous</div>
  </div>

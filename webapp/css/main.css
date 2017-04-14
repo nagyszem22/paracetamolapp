@@ -1,19 +1,9 @@
 body  {
 	height: 100%;
-	background: url('../media/images/3-side.jpg') repeat center center;
-    background-size: contain;
-	position: relative;
-}
-
-.layer{
-    background-color: rgba(24, 147, 217, 0.42);
-    background-repeat: repeat-x;
-    position: absolute;
-    margin-top: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    background: -webkit-linear-gradient(-56deg, rgb(84, 227, 178), rgb(52, 106, 212));
+    background: linear-gradient(-56deg, rgb(84, 227, 178), rgb(52, 106, 212));
+    position: relative;
+    font-family: 'Raleway', sans-serif;
 }
 
 .header
@@ -34,6 +24,7 @@ body  {
     max-width: 700px;
     min-height: 300px;
     box-shadow: 2px 2px 10px rgba(107, 107, 107, 0.09);
+    border-radius: 5px;
 }
 
 .container-main > .translucent{
@@ -55,21 +46,20 @@ body  {
 
 }
 
-.content > .page-title
+.content > .page-title, .content > .top-page > .page-title
 {
 	margin: 0 15px;
 	padding: 15px 0 30px 0;
 	//border-top: 1px solid #ddd;
 	//border-bottom: 1px solid #ddd;
 }
-.content > .page-title > .title
+.content > .page-title > .title, .content > .top-page > .page-title > .title
 {
 	font-size: 40px;
-	font-family: 'Raleway', sans-serif;
 	color: white;
 	font-weight: 400;
 }
-.content > .page-title > .description
+.content > .page-title > .description, .content > .top-page > .page-title > .description
 {
 	padding-top: 13px;
 	font-size: 16px;
@@ -80,13 +70,14 @@ body  {
 .final-text
 {
     margin: 5%;
-    background-color: #2e3436;
-	font-size: 14px;
+    background-color: rgba(46, 52, 54, 0.41);
+	font-size: 18px;
 	font-weight: 400;
 	line-height: 20px;
 	color: #ffffff;
-	padding: 60px 15px 130px 15px;
+	padding: 50px 15px 70px 15px;
 	text-align: center;
+    border-radius: 5px;
 }
 
 .input-box { padding: 15px }
@@ -98,75 +89,121 @@ body  {
 	font-weight: 400;
 	padding-bottom: 5px;
 }
-.input-box > .input-label > .help-button
+.input-box > .input-label > #help-button1, #help-button2
 {
 	position: relative;
 	cursor: pointer;
 }
-.input-box > .input-label > .help-button:hover { color: #16a085 }
-.input-box > .input-label > .help-button:active { top: 1px }
-.input-box > .help-text
-{
-	display: none;
-	font-size: 15px;
-	margin-top: 5px;
-}
+.input-box > .input-label > #help-button1:hover, #help-button2:hover{ color: #16a085 }
+.input-box > .input-label > #help-button1:active, #help-button2:hover { top: 1px }
+
 .input-box > input
 {
-    background-color: rgba(254, 254, 254, 0.8);
+    background-color: white;
 	width: 100%;
 	color: #1c1c1c;
 	font-size: 15px;
 	padding: 10px 10px;
-	border: 1px solid #ffffff;
+	border: 2px solid #ffffff;
+    border-radius: 5px;
     font-weight: 400;
+    transition: background-color 0.2s ease-out,
+    color 0.2s ease-out;
+}
+
+.input-box > input:hover,
+
+.input-box > input:active{
+    border-color: #3FB8AF;
+    transition: background-color 0.3s ease-in,
+    color 0.3s ease-in;
 }
 .next-button
 {
-	position: relative;
-	float: right;
-	width: 120px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	font-size: 14px;
-	font-weight: 600;
-	color: #fff;
-	background: rgb(113, 191, 255);
-	border-bottom: 2px solid rgb(105, 168, 226);
-	margin: 15px;
-	cursor: pointer;
-}
-.next-button:hover
-{
-	background: #135258;
-	border-bottom: 2px solid #08171c;
-}
-.next-button:active { top: 1px }
-
-.previous-button
-{
-    position: relative;
-    float: left;
-    width: 120px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 600;
+    margin: 3%;
+    float: right;
+    font-size: 16px;
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+    padding: 15px;
     color: #fff;
-    background: rgb(113, 191, 255);
-    border-bottom: 2px solid rgb(105, 168, 226);
-    margin: 15px;
-    cursor: pointer;
+    border: 3px solid #fff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    transition: background-color 0.2s ease-out,
+    color 0.2s ease-out;
+    cursor:pointer;
+}
+.next-button:hover,
+
+.next-button:active {
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in,
+    color 0.3s ease-in;
 }
 
-.previous-button:hover
-{
-    background: #135258;
-    border-bottom: 2px solid #08171c;
+.start-button{
+
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 16px;
+    width: 150px;
+    font-weight: bold;
+    padding: 15px;
+    color: #fff;
+    border: 3px solid #fff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    transition: background-color 0.2s ease-out,
+    color 0.2s ease-out;
+    cursor:pointer;
 }
-.previous-button:active { top: 1px }
+
+.start-button:hover,
+
+.start-button:active{
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in,
+    color 0.3s ease-in;
+}
+
+.btn {
+    margin: 3%;
+    float: right;
+    font-size: 16px;
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+    padding: 15px;
+    color: #fff;
+    border: 3px solid #fff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    -webkit-transition: background-color 0.2s ease-out,
+    color 0.2s ease-out;
+    cursor:pointer;
+}
+
+.btn:hover,
+
+.btn:active {
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in,
+    color 0.3s ease-in;
+}
 
 .image-background.background{ background: url('../media/images/background.jpg') no-repeat center center }
 
@@ -177,6 +214,7 @@ body  {
 }
 .image-cover.yellow 
 {
+    border-radius: 5px;
     margin: 1%;
 	background: url('../media/images/yellow.jpg') no-repeat center center;
     -webkit-background-size: cover;
@@ -186,7 +224,7 @@ body  {
 }
 .image-cover.blue 
 {
-
+    border-radius: 5px;
     margin: 1%;
 	border-top: 1px solid #fbfbfb;
 	background: url('../media/images/blue.jpg') no-repeat center center;
@@ -195,11 +233,63 @@ body  {
     -o-background-size: cover;
     background-size: cover;
 }
+
+@media (min-width: 768px) {
+
+    .container{
+        top: 40%;
+        position: fixed;
+        width: 200px;
+        margin-left: -200px;
+        text-decoration: none;
+    }
+    .sidebar-nav .navbar .navbar-collapse {
+        padding: 0;
+        max-height: none;
+        text-decoration: none;
+    }
+    .sidebar-nav .navbar ul {
+        float: none;
+        text-decoration: none;
+    }
+    .sidebar-nav .navbar ul:not {
+        display: block;
+        text-decoration: none;
+    }
+    .sidebar-nav .navbar li {
+        font-size: 16px;
+        font-weight: bold;
+        float: none;
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: rgba(19, 82, 88, 0.29);
+        text-align: center;
+        outline: none;
+        text-decoration: none;
+        border: 2px solid transparent;
+        -webkit-transition: border 0.2s ease-out;
+        cursor:pointer;
+        margin-bottom: 2px;
+    }
+
+    .sidebar-nav .navbar li:hover{
+        border: 2px solid white;
+
+    }
+    .sidebar-nav .navbar li a {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
 .infusion-title
 {
-	padding: 2%;
-	font-size: 20px;
-	font-weight: 600;
+	padding: 6%;
+	font-size: 40px;
+	font-weight: 400;
 	color: #ffffff;
 	text-align: center;
 	border-top: 1px solid #ffffff;
@@ -210,30 +300,33 @@ body  {
 {
 	float: left;
 	width: 233px;
-	height: 320px;
+	height: 100%;
 	padding: 10px;
 }
 .dosage-container > .treatment-container > .image-box
 {
 	width: 200px;
-	height: 200px;
+	height: 230px;
 }
 .dosage-container > .treatment-container > .image-box.first 
-{ 
+{
+    border-radius: 5px;
 	background: url('../media/images/first.jpg') no-repeat center center;
 	-webkit-background-size: contain;
     -moz-background-size: contain;
     background-size: contain;
 }
 .dosage-container > .treatment-container > .image-box.second 
-{ 
+{
 	background: url('../media/images/second.jpg') no-repeat center center;
 	-webkit-background-size: contain;
     -moz-background-size: contain;
     background-size: contain;
+    border-radius: 5px;
 }
 .dosage-container > .treatment-container > .image-box.third 
-{ 
+{
+    border-radius: 5px;
 	background: url('../media/images/third.jpg') no-repeat center center;
 	-webkit-background-size: contain;
     -moz-background-size: contain;
@@ -247,27 +340,28 @@ body  {
 	font-size: 16px;
     padding: 15px 10px 15px 10px;
     text-align: center;
+    border-radius: 5px;
 }
 
 .weight-scale
 {
     color: white;
 	padding: 15px;
-	margin: 10px 0;
-	border-bottom: 1px solid #eeeeee;
+
 }
 .weight-scale > .input-label
 {
 	margin-bottom: 15px;
 
 }
-.weight-scale > #weight
+.weight-scale > #weight1, #weight2
 {
-
-	margin-top: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
 	width: 70px;
 	padding: 5px;
 	border: 1px solid #f0f0f0;
+    margin-bottom: 20px;
 }
 
 

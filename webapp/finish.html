@@ -99,8 +99,37 @@
  		<div class="description">You have successfully submitted this form.</div>
  	</div>
 	<div class="final-text">Thank you for submitting this form. The information about the patient and the treatment required was successfully uploaded to the NHS Database.</div>
-    <div class="next-button" style="float: right" data-link="/index.html">Start new</div>
+	<button class="btn btn--secondary btn-demo js-tingle-modal-2">Start New Form</button>
+	<div class="tingle-demo tingle-demo-tiny">
+		<h1 style="text-align: center">Paracetamol Overdose Form</h1>
+		<p>This form was designed to record and treat accordingly paracetamol overdoses. If you are certain the designated patient suffered from a paracetamol overdose then a new form can be started.</p>
+	</div>
 </div>
 </div>
+
+<link rel="stylesheet" href="css/tingle.css">
+<link rel="stylesheet" href="css/demo.css">
+<script src="js/tingle.js"></script>
+<script>
+    var modalTinyBtn = new tingle.modal({
+        footer: true
+    });
+    var btn2 = document.querySelector('.js-tingle-modal-2');
+
+    btn2.addEventListener('click', function(){
+        modalTinyBtn.open();
+    });
+
+    modalTinyBtn.setContent(document.querySelector('.tingle-demo-tiny').innerHTML);
+
+    modalTinyBtn.addFooterBtn('Start New Form', 'tingle-btn tingle-btn--primary tingle-btn--pull-right', function() {
+        window.location.href = SITE_INDEX+ '/index.html';
+    });
+
+
+    modalTinyBtn.addFooterBtn('Cancel', 'tingle-btn tingle-btn--danger', function(){
+        modalTinyBtn.close();
+    });
+</script>
 </body>
 </html>

@@ -20,10 +20,14 @@ $(document).ready(function(){
 	 }}); */
 
 
-	/* Toggle help text */
+	/* Toggle help text
 	$('.help-button').on('click', function() {
 		$(this).parent('.input-label').parent('.input-box').children('.help-text').toggle();
-	});
+	});*/
+
+
+
+
 
 	/* Show next page */
 	$('.next-button').on('click', function() {
@@ -36,12 +40,21 @@ $(document).ready(function(){
         window.location.href = SITE_INDEX+link;
     });
 
-	if ($('#weight').length > 0) {
+    $('.start-button').on('click', function() {
+        var link = $(this).attr('data-link');
+        window.location.href = SITE_INDEX+link;
+    });
+
+	if ($('#weight1').length > 0) {
 		calculatedose();
 	}
 
-	var slider = document.getElementById('slider');
-	noUiSlider.create(slider, {
+    if ($('#weight1').length > 0) {
+        calculatedose();
+    }
+
+	var slider1 = document.getElementById('slider1');
+	noUiSlider.create(slider1, {
 		start: [10],
 		connect: true,
 		step: 1,
@@ -51,11 +64,26 @@ $(document).ready(function(){
 		}
 	});
 
-	slider.noUiSlider.on('update', function(values, handle) {
-		$('#weight').val(values[handle]);
+	slider1.noUiSlider.on('update', function(values, handle) {
+		$('#weight1').val(values[handle]);
 		calculatedose(values[handle]);
 	});
 
+    var slider2 = document.getElementById('slider2');
+    noUiSlider.create(slider2, {
+        start: [10],
+        connect: true,
+        step: 1,
+        range: {
+            'min': 0,
+            'max': 180
+        }
+    });
+
+    slider2.noUiSlider.on('update', function(values, handle) {
+        $('#weight2').val(values[handle]);
+        calculatedose(values[handle]);
+    });
 });
 
 function calculatedose (w)

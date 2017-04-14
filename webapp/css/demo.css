@@ -52,66 +52,12 @@ body {
   padding: 0;
 }
 
-body {
-  background-color: #fff;
-  font-family: "Varela Round", sans-serif;
-}
-
 a,
 a:hover,
 a:visited {
   color: #39df7f;
   text-decoration: underline;
 }
-
-h2,
-h3 {
-  border-bottom: 1px dotted #dfece6;
-}
-
-
-
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  width: 70%;
-}
-
-
-
-
-.btn {
-  position: relative;
-  float: right;
-  width: 120px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 600;
-  color: #fff;
-  background: rgb(113, 191, 255);
-  border-bottom: 2px solid rgb(105, 168, 226);
-  margin: 15px;
-  cursor: pointer;
-
-
-}
-
-.btn:hover
-{
-  background: #135258;
-  border-bottom: 2px solid #08171c;
-}
-.btn:active { top: 1px }
-
-.btn-demo {
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-}
-
-
-
 
 .tingle-demo {
   display: none;
