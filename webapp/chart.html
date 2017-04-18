@@ -5,14 +5,19 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/icons.css">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/nouislider.min.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/nouislider.min.js"></script>
 	<script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
 	<script type="text/javascript" src="https://code.highcharts.com/modules/exporting.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/api.js"></script>
 </head>
 <body>
+ <div class="page-loader"></div>
  <div class="header"></div>
  <div class="page-title"> . </div>
  <div class="layer">
@@ -98,55 +103,29 @@
         <div class="title">Treatment line</div>
         <!-- div class="description">Submit the details of your patient's final blood tests</div -->
     </div>
- 	<div id="container"></div>
- 	<div class="next-button" data-link="/treatments.html">Next</div>
-   <div class="next-button" style="float: left" data-link="/first_blood.html">Previous</div>
+    <div class="patient-details-on-chart">
+      <div class="title">Patient details</div>
+      <div class="detail">
+        <span class="field">Name:</span> <span class="content name"></span>
+        <span class="field">Birthday:</span> <span class="content birthday"></span>
+        <span class="field">NHS number:</span> <span class="content nhsNumber"></span>
+        <span class="field">Date:</span> <span class="content date"></span>
+      </div>
+    </div>
+    <div class="weight-scale">
+      <div class="input-label" style="padding-top: 15px; font-size: 25px">Blood Result - Plasma-Paracetamol Concentration mg/litre:</div>
+      <div id="slider3"></div>
+      <input type="number" id="paracetamolConcentration"> mg/litre
+    </div>
+    <div class="weight-scale">
+      <div class="input-label" style="padding-top: 15px; font-size: 25px">Time between paracetamol dose and blood sample taken:</div>
+      <input type="number" id="initialBloodTestHours"> hours and <input type="number" id="initialBloodTestMinutes"> minutes
+    </div>
+ 	  <div id="container"></div>
+    <div class="indication-box"></div>
+ 	  <div class="next-button" data-link="/treatments.html">Next</div>
+    <div class="next-button" style="float: left" data-link="/first_blood.html">Previous</div>
  </div>
  </div>
- <script type="text/javascript">
- 	Highcharts.chart('container', {
-
-     title: {
-        text: ''
-    },
-
-     /* subtitle: {
-        text: 'Source: thesolarfoundation.com'
-    }, */
-
-
-     xAxis: {
-         title: {
-             text: 'Time since Paracetamol Ingestion (hours)'
-         }
-     },
-
-     yAxis: {
-        title: {
-            text: 'Plasma-Paracetamol Concentration (mg/litre)'
-        }
-    },
-    legend: {
-        layout: 'horizontal',
-        align: 'center',
-        verticalAlign: 'bottom'
-    },
-
-    plotOptions: {
-        series: {
-            pointStart: 1
-        }
-    },
-
-    series: [{
-        name: 'Treatment Line',
-        data: [60, 40, 25, 15, 10, 4, 2, 0]
-    }, {
-        name: 'Plasma Line',
-        data: [150, 100, 70, 50, 35, 25, 20, 14, 10, 8, 7]
-    }]
-
-});
- </script>
 </body>
 </html>

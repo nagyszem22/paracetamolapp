@@ -9,10 +9,12 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" href="css/pikaday.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/api.js"></script>
 </head>
 <body>
-
+ <div class="page-loader"></div>
  <div class="header"></div>
  <div class="page-title"> . </div>
  <div class="layer"></div>
@@ -106,11 +108,11 @@
  	</div>
  	<div class="input-box">
  		<div class="input-label">Urea and Electrolytes (U and E)</div>
- 		<input type="text" id="datetimepicker2" name="ureaDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
+ 		<input type="text" id="datetimepicker2" name="ueDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
  	</div>
  	<div class="input-box">
  		<div class="input-label">Liver Function Test (LFT)</div>
- 		<input type="text" id="datetimepicker3" name="liverDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
+ 		<input type="text" id="datetimepicker3" name="lftDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
  	</div>
  	<div class="input-box">
  		<div class="input-label">Creatine</div>
@@ -143,7 +145,8 @@
 
              showTime: true,
              autoClose: false,
-             use24hour: false
+             use24hour: true
+
          });
 
      var timepicker2 = new Pikaday(
@@ -156,7 +159,7 @@
 
              showTime: true,
              autoClose: false,
-             use24hour: false
+             use24hour: true
          });
 
      var timepicker3 = new Pikaday(
@@ -169,7 +172,7 @@
 
              showTime: true,
              autoClose: false,
-             use24hour: false
+             use24hour: true
          });
 
      var timepicker4 = new Pikaday(
@@ -182,7 +185,7 @@
 
              showTime: true,
              autoClose: false,
-             use24hour: false
+             use24hour: true
          });
 
      var timepicker5 = new Pikaday(
@@ -195,7 +198,7 @@
 
              showTime: true,
              autoClose: false,
-             use24hour: false
+             use24hour: true
          });
 
  </script>

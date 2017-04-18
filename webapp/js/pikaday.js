@@ -792,7 +792,7 @@
             if (opts.format === null) {
                 opts.format = 'YYYY-MM-DD';
                 if (opts.showTime) {
-                    opts.format += ' HH:mm:ss';
+                    opts.format += ' HH:mm';
                 }
             }
 

@@ -14,7 +14,16 @@
 
 Route::group(['prefix' => 'api', 'middleware' => ['api']], function () {
 	
-	/* app init routes */
-    Route::post('/v1/maindetails', ['uses' => 'v1\AppController@maindetails']);
+	/* patient details route */
+    Route::post('/v1/patientdetails', ['uses' => 'v1\AppController@patientDetails']);
+
+    /* initial blood test route */
+    Route::post('/v1/initialbloodtest', ['uses' => 'v1\AppController@initialBloodTest']);
+
+    /* chart route */
+    Route::post('/v1/chart', ['uses' => 'v1\AppController@chart']);
+
+    /* treatment route */
+    Route::post('/v1/treatment', ['uses' => 'v1\AppController@treatment']);
 
 });
