@@ -17,6 +17,9 @@ Route::group(['prefix' => 'api', 'middleware' => ['api']], function () {
 	/* patient details route */
     Route::post('/v1/patientdetails', ['uses' => 'v1\AppController@patientDetails']);
 
+    /* timeline details route */
+    Route::post('/v1/timeline', ['uses' => 'v1\AppController@timeline']);
+
     /* initial blood test route */
     Route::post('/v1/initialbloodtest', ['uses' => 'v1\AppController@initialBloodTest']);
 
@@ -25,5 +28,8 @@ Route::group(['prefix' => 'api', 'middleware' => ['api']], function () {
 
     /* treatment route */
     Route::post('/v1/treatment', ['uses' => 'v1\AppController@treatment']);
+
+    /* final blood test route */
+    Route::post('/v1/finalbloodtest', ['uses' => 'v1\AppController@finalBloodTest']);
 
 });

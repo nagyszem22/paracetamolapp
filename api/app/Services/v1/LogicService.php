@@ -36,6 +36,26 @@ class LogicService extends Service
 
 
 
+    /* get timeline details */
+    public function timeline($input)
+    {
+        /* calculate the time difference between the current time and the ingestion time */
+        $now = strtotime($input['currentDateTime']);
+        $ingestion = strtotime($input['ingestionDateTime']);
+        $diff = $now - $ingestion;
+        $seconds = $diff % 60;
+        $minutes = (($diff-$seconds) / 60) % 60;
+        $hours = ($diff-$seconds-$minutes*60) / (60*60);
+
+        /* create the answer array */
+        $output['hoursAgo'] = $hours;
+        $output['minutesAgo'] = $minutes;
+
+        return $this->createResponse($output);
+    }
+
+
+
     /* save initial blood test details */
     public function initialBloodTest($input)
     {
@@ -116,6 +136,13 @@ class LogicService extends Service
         /* Add paracetamol concentration */
         $output['paracetamolConc'] = $input['conc'];
 
+        /* Check whether the treatment is needed or not */
+        if ($output['plasmaLine'][3] < 100) {
+            $output['isTreatmentNeeded'] = 0;
+        } else {
+            $output['isTreatmentNeeded'] = 1;
+        }
+
         return $this->createResponse($output);
     }
 
@@ -125,6 +152,33 @@ class LogicService extends Service
     {
         $kilos = $input['kilos'];
 
+        if ($kilos > 110) { 
+            $kilos = 110; 
+        }
+        
+        /* Calculate volume of salin */
+        $mf = 1;
+        if ($kilos > 40) {
+            $mf=2;
+        }
+        $output['ICvol1'] = 100 * $mf;
+        $output['ICvol2'] = 250 * $mf;
+        $output['ICvol3'] = 500 * $mf;
+
+        /* Calculate infusion rates */
+        $dose1 = $kilos * 0.75;
+        $r1 = $dose1 + $output['ICvol1'];
+        $output['rate1'] = round($r1);
+         
+        $dose2 = $kilos * 0.25;
+        $r2=($dose2 + $output['ICvol2']) / 4;
+        $output['rate2']=round($r2);
+         
+        $dose3 = $kilos * 0.5;
+        $r3 = ($dose3 + $output['ICvol3']) / 16;
+        $output['rate3']=round($r3);
+
+        /* calculate dosage */
         $output['weight'] = $kilos;
         if ($kilos == 1) { 
             $output['firstAmpule'] = 3; $output['secondAmpule'] = 8; $output['thirdAmpule'] = 16;
@@ -176,4 +230,11 @@ class LogicService extends Service
 
         return $this->createResponse($output);
     }
+
+
+
+     public function finalBloodTest($input)
+     {
+        return $this->createResponse($input);
+     }
 }

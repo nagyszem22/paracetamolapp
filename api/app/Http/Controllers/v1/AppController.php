@@ -32,7 +32,7 @@ class AppController extends Controller
             "name" => "required|max:80",
             "birthday" => "required|date|before:ingestionDateTime",
             "nhsNumber" => "required|numeric|digits:8",
-            "ingestionDateTime" => "required|date|before:".$request->input()['currentDateTime']
+            "ingestionDateTime" => "required|date|before:currentDateTime"
         ]);
 
         if ($validator->fails()) {
@@ -46,15 +46,33 @@ class AppController extends Controller
 
 
 
+    public function timeline(Request $request) 
+    {
+        $validator = Validator::make($request->all(), [
+            "currentDateTime" => "required|date",
+            "ingestionDateTime" => "required|date|before:currentDateTime"
+        ]);
+
+        if ($validator->fails()) {
+          return response()->json(
+                $this->error->formValidationFailed($validator->messages()),
+            200);
+        }
+
+        return response()->json($this->logic->timeline($request->input()));
+    }
+
+
+
     public function initialBloodTest(Request $request) 
     {
         $validator = Validator::make($request->all(), [
-            "paracetamolConcDateTime" => "required|date",
+            "paracetamolConcDateTime" => "required|date|after:ingestionDateTime",
             "ueDateTime" => "date",
             "lftDateTime" => "date",
             "creatineDateTime" => "date",
             "inrDateTime" => "date",
-            "ingestionDateTime" => "required|date|before:".$request->input()['paracetamolConcDateTime']
+            "ingestionDateTime" => "required|date"
         ]);
 
         if ($validator->fails()) {
@@ -100,5 +118,24 @@ class AppController extends Controller
         }
 
         return response()->json($this->logic->treatment($request->input()));
+    }
+
+
+    public function finalBloodTest(Request $request) 
+    {
+        $validator = Validator::make($request->all(), [
+            "ueDateTime" => "date",
+            "lftDateTime" => "date",
+            "creatineDateTime" => "date",
+            "inrDateTime" => "date"
+        ]);
+
+        if ($validator->fails()) {
+          return response()->json(
+                $this->error->formValidationFailed($validator->messages()),
+            200);
+        }
+
+        return response()->json($this->logic->finalBloodTest($request->input()));
     }
 }

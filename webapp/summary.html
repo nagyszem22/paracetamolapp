@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Paracetamol overdose</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/h-ibaldo/Raleway_Fixed_Numerals/master/css/rawline.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/icons.css">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/nouislider.min.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/nouislider.min.js"></script>
+	<script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+	<script type="text/javascript" src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/api.js"></script>
+</head>
+<body>
+ <div class="page-loader"></div>
+ <div class="header"></div>
+ <div class="page-title"> . </div>
+ <div class="layer">
+ </div>
+ <div class="container-main" style="font-family: 'rawline', sans-serif;">
+   <div class="translucent"></div>
+ <div class="content">
+    <ol class="progress-track">
+      <li class="progress-done">
+        <center>
+          <div class="icon-wrap">
+            <svg class="icon-state icon-check-mark">
+              <use xlink:href="#icon-check-mark"></use>
+            </svg>
+
+            <svg class="icon-state icon-down-arrow">
+              <use xlink:href="#icon-down-arrow"></use>
+            </svg>
+          </div>
+          <span class="progress-text">Patient Details</span>
+        </center>
+      </li>
+
+      <li class="progress-done">
+        <center>
+          <div class="icon-wrap">
+            <svg class="icon-state icon-check-mark">
+              <use xlink:href="#icon-check-mark"></use>
+            </svg>
+
+            <svg class="icon-state icon-down-arrow">
+              <use xlink:href="#icon-down-arrow"></use>
+            </svg>
+          </div>
+          <span class="progress-text">Initial Blood Tests</span>
+        </center>
+      </li>
+
+      <li class="progress-done">
+        <center>
+          <div class="icon-wrap">
+            <svg class="icon-state icon-check-mark">
+              <use xlink:href="#icon-check-mark"></use>
+            </svg>
+
+            <svg class="icon-state icon-down-arrow">
+              <use xlink:href="#icon-down-arrow"></use>
+            </svg>
+          </div>
+          <span class="progress-text">Treatment line</span>
+        </center>
+      </li>
+      <li class="progress-done">
+        <center>
+          <div class="icon-wrap">
+            <svg class="icon-state icon-check-mark">
+              <use xlink:href="#icon-check-mark"></use>
+            </svg>
+
+            <svg class="icon-state icon-down-arrow">
+              <use xlink:href="#icon-down-arrow"></use>
+            </svg>
+          </div>
+          <span class="progress-text">Dosage Calculation</span>
+        </center>
+      </li>
+      <li class="progress-done">
+        <center>
+          <div class="icon-wrap">
+            <svg class="icon-state icon-check-mark">
+              <use xlink:href="#icon-check-mark"></use>
+            </svg>
+
+            <svg class="icon-state icon-down-arrow">
+              <use xlink:href="#icon-down-arrow"></use>
+            </svg>
+          </div>
+          <span class="progress-text">Final Blood Tests</span>
+        </center>
+      </li>
+    </ol>
+    <div class="page-title">
+        <div class="title" style="text-align: center">Summary before Form Submission</div>
+        <!-- div class="description">Submit the details of your patient's final blood tests</div -->
+    </div>
+    <div class="patient-details-on-chart summary-of-details">
+      <div class="title">Form details</div>
+      <div class="detail">
+          <span class ="field-name">
+            <span class="field">Date:</span> <span class="content date"></span>
+          </span>
+          <span class ="field-name">
+            <span class="field">Subject:</span> <span class="content subject">Paracetamol overdose</span>
+          </span>
+           <span class ="field-name">
+            <span class="field">Ingestion:</span> <span class="content ingestion"></span>
+          </span>
+      </div>
+      <div class="title" style="margin-top: 20px">Patient details</div>
+      <div class="detail">
+          <span class ="field-name">
+            <span class="field">Name:</span> <span class="content name"></span>
+          </span>
+          <span class="field-name">
+            <span class="field">NHS number:</span> <span class="content nhsNumber"></span>
+          </span>
+          <span class="field-name">
+            <span class="field">Birthday:</span> <span class="content birthday"></span>
+          </span>
+          <span class="field-name">
+            <span class="field">Weight:</span> <span class="content weight"></span>
+          </span>
+      </div>
+      <div class="title" style="margin-top: 20px">Treatments</div>
+      <div class="detail">
+          <span class ="field-name">
+            <span id="firstAmpule">-</span>ml of Acetylcysteine (each ampule=200mg/ml) in <span id="ICvol1">-</span>ml of 5% Glucose (or 0.9% Sodium Chloride) | Infusion Rate: <span id="rate1">-</span>ml per hour (Duration: 4 Hours)
+          </span>
+          <span class="field-name">
+            <span id="secondAmpule">-</span>ml of Acetylcysteine (each ampule=200mg/ml) in <span id="ICvol2">-</span>ml of 5% Glucose (or 0.9% Sodium Chloride) | Infusion Rate: <span id="rate2">-</span>ml per hour (Duration: 4 Hours)
+          </span>
+          <span class="field-name">
+            <span id="thirdAmpule">-</span>ml of Acetylcysteine (each ampule=200mg/ml) in <span id="ICvol3">-</span>ml of 5% Glucose (or 0.9% Sodium Chloride) | Infusion Rate: <span id="rate3">-</span>ml per hour (Duration: 4 Hours)
+          </span>
+      </div>
+      <div class="title" style="margin-top: 20px">Initial blood test</div>
+      <div class="detail">
+          <span class ="field-name">
+            <span class="field">Paracetamol Concentration:</span> <span class="content paracetamolConcDateTime"></span>
+          </span>
+          <span class ="field-name">
+            <span class="field">Paracetamol Concentration Result:</span> <span class="content paracetamolConc">-</span>
+          </span>
+          <span class="field-name">
+            <span class="field">Urea and Electrolytes (U and E):</span> <span class="content ueDateTimeInitial">-</span>
+          </span>
+          <span class="field-name">
+            <span class="field">Liver Function Test (LFT):</span> <span class="content lftDateTimeInitial">-</span>
+          </span>
+          <span class="field-name">
+            <span class="field">Creatine:</span> <span class="content creatineDateTimeInitial">-</span>
+          </span>
+          <span class="field-name">
+            <span class="field">International Normalised Ratio (INR) or Prothrombin Time (PT):</span> <span class="content inrDateTimeInitial">-</span>
+          </span>
+      </div>
+      <div class="title" style="margin-top: 20px">Final blood test</div>
+      <div class="detail">
+          <span class="field-name">
+            <span class="field">Urea and Electrolytes (U and E):</span> <span class="content ueDateTimeFinal">-</span>
+          </span>
+          <span class="field-name">
+            <span class="field">Liver Function Test (LFT):</span> <span class="content lftDateTimeFinal">-</span>
+          </span>
+          <span class="field-name">
+            <span class="field">Creatine:</span> <span class="content creatineDateTimeFinal">-</span>
+          </span>
+          <span class="field-name">
+            <span class="field">International Normalised Ratio (INR) or Prothrombin Time (PT):</span> <span class="content inrDateTimeFinal">-</span>
+          </span>
+      </div>
+    </div>
+    <div class="indication-box"></div>
+ 	  <button class="btn btn--secondary btn-demo js-tingle-modal-2">Submit Form</button>
+    <div class="tingle-demo tingle-demo-tiny">
+       <h1>Form Submission</h1>
+       <p>You are about to submit this form. The form can no longer be edited once it has been submitted.</p>
+    </div>
+    <div class="previous-button" style="float: left" data-link="/second_blood.html">Previous</div>
+ </div>
+ </div>
+ <link rel="stylesheet" href="css/tingle.css">
+ <link rel="stylesheet" href="css/demo.css">
+ <script src="js/tingle.js"></script>
+ <script type="text/javascript">
+     var modalTinyBtn = new tingle.modal({
+         footer: true
+     });
+     var btn2 = document.querySelector('.js-tingle-modal-2');
+
+     btn2.addEventListener('click', function(){
+         modalTinyBtn.open();
+     });
+
+     modalTinyBtn.setContent(document.querySelector('.tingle-demo-tiny').innerHTML);
+
+     modalTinyBtn.addFooterBtn('Submit Form', 'tingle-btn tingle-btn--primary tingle-btn--pull-right', function() {
+         window.location.href = SITE_INDEX+ '/finish.html';
+     });
+
+
+     modalTinyBtn.addFooterBtn('Cancel', 'tingle-btn tingle-btn--danger', function(){
+         modalTinyBtn.close();
+     });
+ </script>
+</body>
+</html>

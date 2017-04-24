@@ -790,7 +790,7 @@
 
             // If no format is given, set based on showTime
             if (opts.format === null) {
-                opts.format = 'YYYY-MM-DD';
+                opts.format = 'DD-MM-YYYY';
                 if (opts.showTime) {
                     opts.format += ' HH:mm';
                 }

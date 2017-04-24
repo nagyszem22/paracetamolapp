@@ -7,11 +7,15 @@
 	<link rel="stylesheet" type="text/css" href="css/icons.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" href="css/pikaday.css">
+	<link rel="stylesheet" type="text/css" href="css/pikaday.css">
+	<link rel="stylesheet" type="text/css" href="css/tingle.css?v0.3">
+ 	<link rel="stylesheet" type="text/css" href="css/demo.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/api.js"></script>
+	<script src="js/opentip-jquery-excanvas.js"></script>
+	<link href="css/opentip.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
  <div class="page-loader"></div>
@@ -22,117 +26,121 @@
 	 <div class="translucent"></div>
  <div class="content">
  	<ol class="progress-track">
-	  <li class="progress-done">
-	    <center>
-	      <div class="icon-wrap">
-	        <svg class="icon-state icon-check-mark">
-	          <use xlink:href="#icon-check-mark"></use>
-	        </svg>
+      <li class="first-in-progress">
+        <center>
+          <div class="icon-wrap">
+            <svg class="icon-state icon-check-mark">
+              <use xlink:href="#icon-check-mark"></use>
+            </svg>
 
-	        <svg class="icon-state icon-down-arrow">
-	          <use xlink:href="#icon-down-arrow"></use>
-	        </svg>
-	      </div>
-	      <span class="progress-text">Patient Details</span>
-	    </center>
-	  </li>
+            <svg class="icon-state icon-down-arrow">
+              <use xlink:href="#icon-down-arrow"></use>
+            </svg>
+          </div>
+          <span class="progress-text first-page-in-progress"></span>
+        </center>
+      </li>
 
-	  <li class="progress-done progress-current">
-	    <center>
-	      <div class="icon-wrap">
-	        <svg class="icon-state icon-check-mark">
-	          <use xlink:href="#icon-check-mark"></use>
-	        </svg>
+      <li class="second-in-progress">
+        <center>
+          <div class="icon-wrap">
+            <svg class="icon-state icon-check-mark">
+              <use xlink:href="#icon-check-mark"></use>
+            </svg>
 
-	        <svg class="icon-state icon-down-arrow">
-	          <use xlink:href="#icon-down-arrow"></use>
-	        </svg>
-	      </div>
-	      <span class="progress-text">Initial Blood Tests</span>
-	    </center>
-	  </li>
+            <svg class="icon-state icon-down-arrow">
+              <use xlink:href="#icon-down-arrow"></use>
+            </svg>
+          </div>
+          <span class="progress-text second-page-in-progress"></span>
+        </center>
+      </li>
 
-	  <li class="progress-todo">
-	    <center>
-	      <div class="icon-wrap">
-	        <svg class="icon-state icon-check-mark">
-	          <use xlink:href="#icon-check-mark"></use>
-	        </svg>
+      <li class="third-in-progress">
+        <center>
+          <div class="icon-wrap">
+            <svg class="icon-state icon-check-mark">
+              <use xlink:href="#icon-check-mark"></use>
+            </svg>
 
-	        <svg class="icon-state icon-down-arrow">
-	          <use xlink:href="#icon-down-arrow"></use>
-	        </svg>
-	      </div>
-	      <span class="progress-text">Treatment line</span>
-	    </center>
-	  </li>
+            <svg class="icon-state icon-down-arrow">
+              <use xlink:href="#icon-down-arrow"></use>
+            </svg>
+          </div>
+          <span class="progress-text third-page-in-progress"></span>
+        </center>
+      </li>
 
-	  <li class="progress-todo">
-	    <center>
-	      <div class="icon-wrap">
-	        <svg class="icon-state icon-check-mark">
-	          <use xlink:href="#icon-check-mark"></use>
-	        </svg>
+      <li class="fourth-in-progress">
+        <center>
+          <div class="icon-wrap">
+            <svg class="icon-state icon-check-mark">
+              <use xlink:href="#icon-check-mark"></use>
+            </svg>
 
-	        <svg class="icon-state icon-down-arrow">
-	          <use xlink:href="#icon-down-arrow"></use>
-	        </svg>
-	      </div>
-	      <span class="progress-text">Dosage Calculation</span>
-	    </center>
-	  </li>
-	  <li class="progress-todo">
-	    <center>
-	      <div class="icon-wrap">
-	        <svg class="icon-state icon-check-mark">
-	          <use xlink:href="#icon-check-mark"></use>
-	        </svg>
+            <svg class="icon-state icon-down-arrow">
+              <use xlink:href="#icon-down-arrow"></use>
+            </svg>
+          </div>
+          <span class="progress-text fourth-page-in-progress"></span>
+        </center>
+      </li>
+      <li class="fifth-in-progress">
+        <center>
+          <div class="icon-wrap">
+            <svg class="icon-state icon-check-mark">
+              <use xlink:href="#icon-check-mark"></use>
+            </svg>
 
-	        <svg class="icon-state icon-down-arrow">
-	          <use xlink:href="#icon-down-arrow"></use>
-	        </svg>
-	      </div>
-	      <span class="progress-text">Final Blood Tests</span>
-	    </center>
-	  </li>
-	</ol>
+            <svg class="icon-state icon-down-arrow">
+              <use xlink:href="#icon-down-arrow"></use>
+            </svg>
+          </div>
+          <span class="progress-text fifth-page-in-progress"></span>
+        </center>
+      </li>
+    </ol>
  	<div class="page-title">
  		<div class="title">Initial Blood Tests</div>
- 		<div class="description">Submit the details of your patient's initial blood tests</div>
+ 		<div class="description">If the following tests were done, input the date and time when they were taken. Otherwise, click the N/A button.</div>
  	</div>
  	<div class="image-cover yellow"></div>
 	 <div class="image-background background"></div>
  	<div class="input-box">
- 		<div class="input-label">Paracetamol Concentration</div>
+ 		<div class="input-label">Paracetamol Concentration <span class="icon-stars" style="color: #e2e2e2" id="help-button3"></span></div>
  		<input type="text" id="datetimepicker1" name="paracetamolConcDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
  	</div>
  	<div class="input-box">
- 		<div class="input-label">Urea and Electrolytes (U and E)</div>
+ 		<div class="input-label">Urea and Electrolytes (U and E) <span class="date-input-switcher"><input type="checkbox" class="date-input-checkbox"> N/A</span></div>
  		<input type="text" id="datetimepicker2" name="ueDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
  	</div>
  	<div class="input-box">
- 		<div class="input-label">Liver Function Test (LFT)</div>
+ 		<div class="input-label">Liver Function Test (LFT) <span class="date-input-switcher"><input type="checkbox" class="date-input-checkbox"> N/A</span></div>
  		<input type="text" id="datetimepicker3" name="lftDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
  	</div>
  	<div class="input-box">
- 		<div class="input-label">Creatine</div>
+ 		<div class="input-label">Creatine <span class="date-input-switcher"><input type="checkbox" class="date-input-checkbox"> N/A</span></div>
  		<input type="text" id="datetimepicker4" name="creatineDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
  	</div>
  	<div class="image-cover blue"></div>
  	<div class="input-box">
- 		<div class="input-label">International Normalised Ratio (INR) or Prothrombin Time (PT)</div>
+ 		<div class="input-label">International Normalised Ratio (INR) or Prothrombin Time (PT) <span class="date-input-switcher"><input type="checkbox" class="date-input-checkbox"> N/A</span></div>
  		<input type="text" id="datetimepicker5" name="inrDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
 	</div>
 
-     <div class="next-button" data-link="/chart.html">Next</div>
-     <div class="next-button" style="float: left" data-link="/index.html">Previous</div>
-
-
-
+     <div class="next-button make-ajax-call" data-link="/chart.html">Next</div>
+     <div class="previous-button" style="float: left" data-link="/welcome.html">Previous</div>
+     <div class="tingle-demo tingle-demo-tiny">
+       <h1>Warning!</h1>
+       <p>The time difference between the time when the patient ingested the paracetamol dose and the time when the blood sample was taken is smaller than 4 hours.</p>
+		 <p> At under 4 hours the Paracetamol Plasma Levels may not reliable enough to determine treatment. It is advised to wait until the time gap reaches 4 hours and create a new form then.</p>
+		 <p> You can choose to proceed to treatment anyway or just input the final blood tests and submit the form without the treatments.</p>
+    </div>
  </div>
  </div>
 
  <script src="js/pikaday.js"></script>
+ <script src="js/tingle.js"></script>
  <script>
 
      var timepicker1 = new Pikaday(
@@ -200,6 +208,27 @@
              autoClose: false,
              use24hour: true
          });
+
+     var modalTinyBtn = new tingle.modal({
+         footer: true
+     });
+
+     modalTinyBtn.setContent(document.querySelector('.tingle-demo-tiny').innerHTML);
+
+     modalTinyBtn.addFooterBtn('Proceed Anyway', 'tingle-btn tingle-btn--primary tingle-btn--pull-right', function() {
+         window.location.href = SITE_INDEX+ '/chart.html';
+     });
+
+     modalTinyBtn.addFooterBtn('Skip Treatments', 'tingle-btn tingle-btn--primary tingle-btn--pull-right', function() {
+         window.location.href = SITE_INDEX+ '/second_blood.html';
+     });
+
+
+     modalTinyBtn.addFooterBtn('Cancel Form', 'tingle-btn tingle-btn--danger', function(){
+         window.location.href = SITE_INDEX+ '/index.html';
+     });
+
+     new Opentip("#help-button3", "It is mandatory to fill in this field.",{ target: "#help-button3", tipJoint: "bottom" });
 
  </script>
 

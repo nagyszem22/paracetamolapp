@@ -4,7 +4,8 @@
 	<title>Paracetamol overdose</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/icons.css">
+    <link href="https://cdn.rawgit.com/h-ibaldo/Raleway_Fixed_Numerals/master/css/rawline.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/icons.css">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/nouislider.min.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -14,7 +15,7 @@
 	<script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
 	<script type="text/javascript" src="https://code.highcharts.com/modules/exporting.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/api.js"></script>
+	<script type="text/javascript" src="js/api.js?v0.1"></script>
 </head>
 <body>
  <div class="page-loader"></div>
@@ -22,11 +23,11 @@
  <div class="page-title"> . </div>
  <div class="layer">
  </div>
- <div class="container-main">
+ <div class="container-main" style="font-family: 'rawline', sans-serif;">
    <div class="translucent"></div>
  <div class="content">
     <ol class="progress-track">
-      <li class="progress-done">
+      <li class="first-in-progress">
         <center>
           <div class="icon-wrap">
             <svg class="icon-state icon-check-mark">
@@ -37,11 +38,11 @@
               <use xlink:href="#icon-down-arrow"></use>
             </svg>
           </div>
-          <span class="progress-text">Patient Details</span>
+          <span class="progress-text first-page-in-progress"></span>
         </center>
       </li>
 
-      <li class="progress-done">
+      <li class="second-in-progress">
         <center>
           <div class="icon-wrap">
             <svg class="icon-state icon-check-mark">
@@ -52,11 +53,11 @@
               <use xlink:href="#icon-down-arrow"></use>
             </svg>
           </div>
-          <span class="progress-text">Initial Blood Tests</span>
+          <span class="progress-text second-page-in-progress"></span>
         </center>
       </li>
 
-      <li class="progress-done progress-current">
+      <li class="third-in-progress">
         <center>
           <div class="icon-wrap">
             <svg class="icon-state icon-check-mark">
@@ -67,10 +68,11 @@
               <use xlink:href="#icon-down-arrow"></use>
             </svg>
           </div>
-          <span class="progress-text">Treatment line</span>
+          <span class="progress-text third-page-in-progress"></span>
         </center>
       </li>
-      <li class="progress-todo">
+
+      <li class="fourth-in-progress">
         <center>
           <div class="icon-wrap">
             <svg class="icon-state icon-check-mark">
@@ -81,10 +83,10 @@
               <use xlink:href="#icon-down-arrow"></use>
             </svg>
           </div>
-          <span class="progress-text">Dosage Calculation</span>
+          <span class="progress-text fourth-page-in-progress"></span>
         </center>
       </li>
-      <li class="progress-todo">
+      <li class="fifth-in-progress">
         <center>
           <div class="icon-wrap">
             <svg class="icon-state icon-check-mark">
@@ -95,37 +97,75 @@
               <use xlink:href="#icon-down-arrow"></use>
             </svg>
           </div>
-          <span class="progress-text">Final Blood Tests</span>
+          <span class="progress-text fifth-page-in-progress"></span>
         </center>
       </li>
     </ol>
     <div class="page-title">
         <div class="title">Treatment line</div>
-        <!-- div class="description">Submit the details of your patient's final blood tests</div -->
+        <div class="description">Input the result of the Paracetamol Concentration blood test below.</div>
     </div>
     <div class="patient-details-on-chart">
-      <div class="title">Patient details</div>
       <div class="detail">
+          <span class ="field-name">
         <span class="field">Name:</span> <span class="content name"></span>
-        <span class="field">Birthday:</span> <span class="content birthday"></span>
-        <span class="field">NHS number:</span> <span class="content nhsNumber"></span>
-        <span class="field">Date:</span> <span class="content date"></span>
+              </span>
+          <span class="field-name">
+        <span class="field">Time of ingestion:</span> <span class="content ingestionDateTime"></span>
+          </span>
+          <span class="field-name">
+        <span class="field">Time of blood test:</span> <span class="content paracetamolConcDateTime"></span>
+          </span>
       </div>
     </div>
-    <div class="weight-scale">
-      <div class="input-label" style="padding-top: 15px; font-size: 25px">Blood Result - Plasma-Paracetamol Concentration mg/litre:</div>
-      <div id="slider3"></div>
-      <input type="number" id="paracetamolConcentration"> mg/litre
+    <div class="weight-scale" style="margin: 0px 15px 0px 15px; border-bottom: 1px solid #efefef; padding-left: 0px">
+      <div class="input-label" style="padding-top: 15px; font-size: 25px;">Time between Paracetamol dose and blood sample taken:</div>
+      <input type="number" id="initialBloodTestHours" disabled> hours and <input type="number" id="initialBloodTestMinutes" disabled> minutes
     </div>
-    <div class="weight-scale">
-      <div class="input-label" style="padding-top: 15px; font-size: 25px">Time between paracetamol dose and blood sample taken:</div>
-      <input type="number" id="initialBloodTestHours"> hours and <input type="number" id="initialBloodTestMinutes"> minutes
-    </div>
- 	  <div id="container"></div>
+     <div class="weight-scale">
+         <div class="input-label" style="padding-top: 15px; font-size: 25px">Blood Result - Plasma-Paracetamol Concentration mg/litre:</div>
+         <div id="slider3"></div>
+         <input type="number" id="paracetamolConcentration"> mg/litre
+     </div>
+     <div class="weight-scale">
+         <div class="input-label" id="input-graph" style="font-size: 18px; margin-bottom: 0px;">In the graph below, the Plasma Levels are plotted against Time. If the Plasma Levels are plotted above the Treatment Line, then treatment is indicated. Otherwise, treatment is not needed.</div>
+     </div>
+ 	  <div id="container" style="margin: 3%; border-radius: 5px;"></div>
     <div class="indication-box"></div>
- 	  <div class="next-button" data-link="/treatments.html">Next</div>
-    <div class="next-button" style="float: left" data-link="/first_blood.html">Previous</div>
+ 	  <div class="next-button  make-ajax-call" data-link="/treatments.html">Next</div>
+    <div class="previous-button" style="float: left" data-link="/first_blood.html">Previous</div>
+    <div class="tingle-demo tingle-demo-tiny">
+       <h1>Attention!</h1>
+       <p>According to the inputted Paracetamol Concentration the Patient does not require any treatment. This could also be visualized on the plotted graph, as the Treatment Line appears to be below the Plasma Levels Line.</p>
+        <p>Because Treatments are not indicated it is advised to proceed straight to the Final Blood Tests Page or Cancel the Form. If the entered Paracetamol Concentration entered is incorrect, click the "Cancel Button and re-enter the data.</p>
+    </div>
  </div>
  </div>
+
+ <link rel="stylesheet" href="css/tingle.css">
+ <link rel="stylesheet" href="css/demo.css">
+ <script src="js/tingle.js"></script>
+ <script type="text/javascript">
+
+     var modalTinyBtn = new tingle.modal({
+         footer: true
+     });
+
+     modalTinyBtn.setContent(document.querySelector('.tingle-demo-tiny').innerHTML);
+
+     modalTinyBtn.addFooterBtn('Go to Final Tests', 'tingle-btn tingle-btn--primary tingle-btn--pull-right', function() {
+         window.location.href = SITE_INDEX+ '/second_blood.html';
+     });
+
+     modalTinyBtn.addFooterBtn('Cancel Form', 'tingle-btn tingle-btn--primary tingle-btn--pull-right', function() {
+         window.location.href = SITE_INDEX+ '/index.html';
+     });
+
+
+     modalTinyBtn.addFooterBtn('Cancel', 'tingle-btn tingle-btn--danger', function(){
+         modalTinyBtn.close();
+     });
+     
+ </script>
 </body>
 </html>

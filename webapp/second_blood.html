@@ -8,8 +8,10 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" href="css/pikaday.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/api.js"></script>
 </head>
 <body>
  <div class="header"></div>
@@ -20,109 +22,104 @@
 	 <div class="translucent"></div>
  <div class="content">
  	<ol class="progress-track">
-	  <li class="progress-done">
-	    <center>
-	      <div class="icon-wrap">
-	        <svg class="icon-state icon-check-mark">
-	          <use xlink:href="#icon-check-mark"></use>
-	        </svg>
+      <li class="first-in-progress">
+        <center>
+          <div class="icon-wrap">
+            <svg class="icon-state icon-check-mark">
+              <use xlink:href="#icon-check-mark"></use>
+            </svg>
 
-	        <svg class="icon-state icon-down-arrow">
-	          <use xlink:href="#icon-down-arrow"></use>
-	        </svg>
-	      </div>
-	      <span class="progress-text">Patient Details</span>
-	    </center>
-	  </li>
+            <svg class="icon-state icon-down-arrow">
+              <use xlink:href="#icon-down-arrow"></use>
+            </svg>
+          </div>
+          <span class="progress-text first-page-in-progress"></span>
+        </center>
+      </li>
 
-	  <li class="progress-done">
-	    <center>
-	      <div class="icon-wrap">
-	        <svg class="icon-state icon-check-mark">
-	          <use xlink:href="#icon-check-mark"></use>
-	        </svg>
+      <li class="second-in-progress">
+        <center>
+          <div class="icon-wrap">
+            <svg class="icon-state icon-check-mark">
+              <use xlink:href="#icon-check-mark"></use>
+            </svg>
 
-	        <svg class="icon-state icon-down-arrow">
-	          <use xlink:href="#icon-down-arrow"></use>
-	        </svg>
-	      </div>
-	      <span class="progress-text">Initial Blood Tests</span>
-	    </center>
-	  </li>
+            <svg class="icon-state icon-down-arrow">
+              <use xlink:href="#icon-down-arrow"></use>
+            </svg>
+          </div>
+          <span class="progress-text second-page-in-progress"></span>
+        </center>
+      </li>
 
-	  <li class="progress-done">
-	    <center>
-	      <div class="icon-wrap">
-	        <svg class="icon-state icon-check-mark">
-	          <use xlink:href="#icon-check-mark"></use>
-	        </svg>
+      <li class="third-in-progress">
+        <center>
+          <div class="icon-wrap">
+            <svg class="icon-state icon-check-mark">
+              <use xlink:href="#icon-check-mark"></use>
+            </svg>
 
-	        <svg class="icon-state icon-down-arrow">
-	          <use xlink:href="#icon-down-arrow"></use>
-	        </svg>
-	      </div>
-	      <span class="progress-text">Treatment line</span>
-	    </center>
-	  </li>
+            <svg class="icon-state icon-down-arrow">
+              <use xlink:href="#icon-down-arrow"></use>
+            </svg>
+          </div>
+          <span class="progress-text third-page-in-progress"></span>
+        </center>
+      </li>
 
-	  <li class="progress-done">
-	    <center>
-	      <div class="icon-wrap">
-	        <svg class="icon-state icon-check-mark">
-	          <use xlink:href="#icon-check-mark"></use>
-	        </svg>
+      <li class="fourth-in-progress">
+        <center>
+          <div class="icon-wrap">
+            <svg class="icon-state icon-check-mark">
+              <use xlink:href="#icon-check-mark"></use>
+            </svg>
 
-	        <svg class="icon-state icon-down-arrow">
-	          <use xlink:href="#icon-down-arrow"></use>
-	        </svg>
-	      </div>
-	      <span class="progress-text">Dosage Calculation</span>
-	    </center>
-	  </li>
-	  <li class="progress-done progress-current">
-	    <center>
-	      <div class="icon-wrap">
-	        <svg class="icon-state icon-check-mark">
-	          <use xlink:href="#icon-check-mark"></use>
-	        </svg>
+            <svg class="icon-state icon-down-arrow">
+              <use xlink:href="#icon-down-arrow"></use>
+            </svg>
+          </div>
+          <span class="progress-text fourth-page-in-progress"></span>
+        </center>
+      </li>
+      <li class="fifth-in-progress">
+        <center>
+          <div class="icon-wrap">
+            <svg class="icon-state icon-check-mark">
+              <use xlink:href="#icon-check-mark"></use>
+            </svg>
 
-	        <svg class="icon-state icon-down-arrow">
-	          <use xlink:href="#icon-down-arrow"></use>
-	        </svg>
-	      </div>
-	      <span class="progress-text">Final Blood Tests</span>
-	    </center>
-	  </li>
-	</ol>
+            <svg class="icon-state icon-down-arrow">
+              <use xlink:href="#icon-down-arrow"></use>
+            </svg>
+          </div>
+          <span class="progress-text fifth-page-in-progress"></span>
+        </center>
+      </li>
+    </ol>
  	<div class="page-title">
  		<div class="title">Final Blood Tests</div>
- 		<div class="description">Submit the details of your patient's final blood tests</div>
+        <div class="description">If the following tests were done, input the date and time when they were taken. Otherwise, click the N/A button.</div>
  	</div>
  	<div class="image-cover yellow"></div>
  	<div class="input-box">
- 		<div class="input-label">Urea and Electrolytes (U and E)</div>
- 		<input type="text" id="datetimepicker1" name="ureaDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
+ 		<div class="input-label">Urea and Electrolytes (U and E) <span class="date-input-switcher"><input type="checkbox" class="date-input-checkbox"> N/A</span></div>
+ 		<input type="text" id="datetimepicker1" name="ueDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
  	</div>
  	<div class="input-box">
- 		<div class="input-label">Liver Function Test (LFT)</div>
- 		<input type="text" id="datetimepicker2" name="liverDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
+ 		<div class="input-label">Liver Function Test (LFT) <span class="date-input-switcher"><input type="checkbox" class="date-input-checkbox"> N/A</span></div>
+ 		<input type="text" id="datetimepicker2" name="lftDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
  	</div>
  	<div class="input-box">
- 		<div class="input-label">Creatine</div>
+ 		<div class="input-label">Creatine <span class="date-input-switcher"><input type="checkbox" class="date-input-checkbox"> N/A</span></div>
  		<input type="text" id="datetimepicker3" name="creatineDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
  	</div>
  	<div class="image-cover blue"></div>
  	<div class="input-box">
- 		<div class="input-label">International Normalised Ratio (INR) or Prothrombin Time (PT)</div>
+ 		<div class="input-label">International Normalised Ratio (INR) or Prothrombin Time (PT) <span class="date-input-switcher"><input type="checkbox" class="date-input-checkbox"> N/A</span></div>
  		<input type="text" id="datetimepicker4" name="inrDateTime" placeholder="DD/MM/YYYY - hh:mm:ss">
  	</div>
- 	<div class="next-button" style="float: left" data-link="/treatments.html">Previous</div>
-	 <button class="btn btn--secondary btn-demo js-tingle-modal-2">Submit Form</button>
-	 <div class="tingle-demo tingle-demo-tiny">
-		 <h1>Form Submission</h1>
-		 <p>You are about to submit this form. The form can no longer be edited once it has been submitted.</p>
-	 </div>
-
+ 	<div class="next-button make-ajax-call" data-link="/summary.html">Next</div>
+ 	<div class="previous-button" style="float: left" data-link="/treatments.html">Previous</div>
  </div>
  </div>
 
@@ -142,7 +139,7 @@
 
              showTime: true,
              autoClose: false,
-             use24hour: false
+             use24hour: true
          });
 
      var timepicker2 = new Pikaday(
@@ -155,7 +152,7 @@
 
              showTime: true,
              autoClose: false,
-             use24hour: false
+             use24hour: true
          });
 
      var timepicker3 = new Pikaday(
@@ -168,7 +165,7 @@
 
              showTime: true,
              autoClose: false,
-             use24hour: false
+             use24hour: true
          });
 
      var timepicker4 = new Pikaday(
@@ -178,31 +175,11 @@
              minDate: new Date(2000, 0, 1),
              maxDate: new Date(2020, 12, 31),
              yearRange: [2000,2020],
+
              showTime: true,
              autoClose: false,
-             use24hour: false
+             use24hour: true
          });
-
-     var modalTinyBtn = new tingle.modal({
-         footer: true
-     });
-     var btn2 = document.querySelector('.js-tingle-modal-2');
-
-     btn2.addEventListener('click', function(){
-         modalTinyBtn.open();
-     });
-
-     modalTinyBtn.setContent(document.querySelector('.tingle-demo-tiny').innerHTML);
-
-     modalTinyBtn.addFooterBtn('Submit Form', 'tingle-btn tingle-btn--primary tingle-btn--pull-right', function() {
-         window.location.href = SITE_INDEX+ '/finish.html';
-     });
-
-
-     modalTinyBtn.addFooterBtn('Cancel', 'tingle-btn tingle-btn--danger', function(){
-         modalTinyBtn.close();
-     });
-
 
  </script>
 
